@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore World</title>
+</head>
+
+<body style="font-family: Arial; margin: 0; background-color: #f0f8ff;">
+
+    <!-- HEADER -->
+    <header style="background: linear-gradient(to right, #6fb1fc, #4364f7); color: white; text-align: center; padding: 30px;">
+        <h1 style="margin: 10px 0;">Explore World</h1>
+        <p style="font-size: 18px;">Descubra destinos incríveis para sua próxima viagem</p>
+    </header>
+
+    <!-- MENU -->
+    <nav style="text-align: center; padding: 15px; background-color: white;">
+        <a href="#sobre" style="margin: 10px; text-decoration: none; color: #4364f7;">Sobre</a>
+        <a href="#destinos" style="margin: 10px; text-decoration: none; color: #4364f7;">Destinos</a>
+        <a href="#contato" style="margin: 10px; text-decoration: none; color: #4364f7;">Contato</a>
+    </nav>
+
+    <!-- SOBRE -->
+    <section id="sobre" style="padding: 30px; text-align: center;">
+        <h2>Sobre a Plataforma</h2>
+        <p style="max-width: 600px; margin: auto;">
+            Explore World é uma plataforma criada para ajudar você a planejar viagens de forma simples e divertida.
+        </p>
+    </section>
+
+    <!-- DESTINOS -->
+    <section id="destinos" style="padding: 30px; background-color: white; text-align: center;">
+        <h2>Destinos mais procurados</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li>🌍 Paris, França</li>
+            <li>🌴 Rio de Janeiro, Brasil</li>
+            <li>🗾 Tóquio, Japão</li>
+            <li>🏖️ Sydney, Austrália</li>
+        </ul>
+    </section>
+
+    <!-- BOTÃO -->
+    <section style="text-align: center; padding: 40px;">
+        <h2>Reserve sua viagem</h2>
+        <button style="padding: 12px 25px; background-color: #ff7a18; border: none; color: white; font-size: 16px; border-radius: 8px; cursor: pointer;">
+            Reservar Agora ✈️
+        </button>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" style="padding: 30px; text-align: center;">
+        <h2>Contato</h2>
+        <p>Email: contato@exploreworld.com</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background-color: #4364f7; color: white; text-align: center; padding: 15px;">
+        <p>© 2026 Explore World</p>
+    </footer>
+
+</body>
+
+</html>

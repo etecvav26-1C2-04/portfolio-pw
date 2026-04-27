@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Loja de Maquiagem</title>
+	</head>
+
+	<body>
+
+		<!-- Título principal da página -->
+		<h1>Cadastro da Loja de Maquiagem</h1>
+
+		<!-- Links de navegação -->
+		<a href="https://www.belezanaweb.com.br/?utm_source=google&utm_medium=cpc&utm_campaign=G:Institucional:BLZ:exato&gad_source=1&gad_campaignid=14065822944&gclid=EAIaIQobChMI8_fB1cGTkwMVzF5IAB1XfAu4EAAYASAAEgIZ__D_BwE">Produtos</a>
+		<a href="https://www.belezanaweb.com.br/ofertas/">Promoções</a>
+		<a href="https://www.belezanaweb.com.br/atendimento-online">Contato</a>
+
+		<!-- Nome das desenvolvedoras -->
+		<h2>Nome das desenvolvedoras:</h2>
+		<p>Vitória Kishimoto e Gabriela Onaga</p>
+
+		<!-- Título da tabela -->
+		<h2>Lista de Produtos</h2>
+
+		<!-- Início da tabela de produtos -->
+		<table>
+
+			<!-- Cabeçalho da tabela -->
+			<tr>
+				<th>Produto</th>
+				<th>Marca</th>
+				<th>Tipo</th>
+				<th>Preço</th>
+				<th>Estoque</th>
+			</tr>
+
+			<tr>
+				<td>Blush</td>
+				<td>Ruby Rose</td>
+				<td>Make</td>
+				<td>R$20</td>
+				<td>20</td>
+			</tr>
+
+			<tr>
+				<td>Base</td>
+				<td>Melu</td>
+				<td>Make</td>
+				<td>R$45</td>
+				<td>10</td>
+			</tr>
+
+			<tr>
+				<td>Rímel</td>
+				<td>Mari Maria</td>
+				<td>Make</td>
+				<td>R$35</td>
+				<td>12</td>
+			</tr>
+
+			<tr>
+				<td>Batom</td>
+				<td>Kiko Milano</td>
+				<td>Make</td>
+				<td>R$50</td>
+				<td>8</td>
+			</tr>
+
+			<tr>
+				<td>Iluminador</td>
+				<td>Bruna Tavares</td>
+				<td>Make</td>
+				<td>R$40</td>
+				<td>6</td>
+			</tr>
+
+		</table>
+
+		<br><br>
+
+		<!-- Imagem de maquiagem -->
+		<img src="https://blog.nossoarmazem.com.br/wp-content/uploads/2020/12/makeup01-1024x683.jpg" width="150" alt="Imagem de maquiagem">
+
+		<br><br>
+
+		<!-- Formulário de cadastro de produto -->
+		<fieldset>
+			<legend>Cadastro de Produto</legend>
+
+			<label>Nome do Produto:</label>
+			<input type="text" required><br><br>
+
+			<label>Marca:</label>
+			<input type="text" required><br><br>
+
+			<!-- Botões do formulário -->
+			<button>Cadastrar</button>
+			<button>Limpar</button>
+		</fieldset>
+
+		<!-- Rodapé da página -->
+		<p>Copy © Loja de Make</p>
+
+	</body>
+</html>

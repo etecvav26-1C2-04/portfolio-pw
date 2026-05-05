@@ -1,0 +1,113 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    color: #F6AFA0;
+    font-family:'Verdana';
+}
+
+header{
+    background-color:#FBE4DD ;
+    color:#F6AFA0;
+    text-align: center;
+    padding: 20px;
+}
+
+nav{
+    line-height: 30px;
+    background-color:#FFF5F2 ;
+    height: 580px;
+    width: 100px;
+    padding: 5px;
+    float: left;
+    text-align: left;
+}
+
+section{
+    float: left;
+    padding: 10px;
+}
+
+footer{
+    background-color:#EFA89A ;
+    color:#ffffff;
+    text-align: center; 
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    clear:both;
+    width: 100%;
+}
+
+.container{
+    display:flex;
+    width:100%;
+    margin-left: 45px;
+    text-align: center;
+}
+
+.produtos{
+    margin-left: 50px;
+    margin-right:80px;
+    background-color:#FFF5F2;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:2px 2px 10px gray;
+    width:300px;
+    text-align: center;
+}
+
+.devs{
+    font-size:20px;
+    margin-left: 160px;
+    margin-top: 130px;
+}
+
+.nomes{
+    margin-left: 160px;
+}
+
+button{
+    background-color:#F6AFA0;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:10px;
+    cursor:pointer;
+}
+
+.cadastro{
+    background-color:#FFF5F2;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:2px 2px 10px gray;
+    width:300px;
+    margin-left: 370px;
+    margin-right: 50px;
+    text-align: center;
+}
+
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;              
+    width: 150px;
+    height: 100vh;       
+    background-color: #FFF5F2;
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none; 
+    color: #6b4c4c;
+    margin-top: 10px;
+}
+
+.logo-meio {
+    width: 370px;
+}   

@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+        <title>Glam Beauty</title>
+        <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <header>
+		<h1>✨Glam Beauty✨</h1>
+    </header>
+
+<div class="menu">
+	<nav>
+		<a href>Produtos</a>
+		<a href>Skincare</a>
+		<a href>Makes</a>
+		<a href>Promoções</a>
+		<a href>Contato</a>
+
+    </nav>
+</div>
+
+<section>
+
+    <div class="container">
+
+        <div class="cadastro">
+
+            <h2>Receba promoções exclusivas!</h2>
+
+            <p>
+                Cadastre-se para receber descontos,
+                novidades e lançamentos da Glow Beauty.
+            </p>
+
+            <form>
+                <fieldset>
+                    <legend>Cadastro</legend>
+
+                    <label>Nome:</label>
+                    <input type="text">
+
+                    <br><br>
+
+                    <label>Email:</label>
+                    <input type="text">
+
+                    <br><br>
+
+                    <label>Telefone:</label>
+                    <input type="text">
+
+                    <br><br>
+
+                    <label>Endereço:</label>
+                    <input type="text">
+
+                    <br><br>
+
+                    <button type="submit">Cadastrar</button>
+                    <button type="reset">Limpar</button>
+
+                </fieldset>
+            </form>
+
+        </div>
+
+        <img src="img/img.png" alt="Logo" class="logo-meio">
+
+        <div class="produtos">
+
+            <h2>Produtos em Destaque</h2>
+
+            <table>
+
+                <tr>
+                    <th>Produto</th>
+                    <th>Categoria</th>
+                    <th>Preço</th>
+                    <th>Avaliação</th>
+                </tr>
+
+                <tr>
+                    <td>Gloss</td>
+                    <td>Lábios</td>
+                    <td>R$20</td>
+                    <td>★★★★★</td>
+                </tr>
+
+                <tr>
+                    <td>Base</td>
+                    <td>Pele</td>
+                    <td>R$49</td>
+                    <td>★★★★☆</td>
+                </tr>
+
+                <tr>
+                    <td>Sombra</td>
+                    <td>Olhos</td>
+                    <td>R$39</td>
+                    <td>★★★☆☆</td>
+                </tr>
+
+                <tr>
+                    <td>Rímel</td>
+                    <td>Olhos</td>
+                    <td>R$28</td>
+                    <td>★★★★☆</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <h2 class="devs">Nomes das desenvolvedoras:</h2>
+    <p class="nomes">Vitória Kishimoto e Gabriela Onaga</p>
+
+</section>
+
+    <footer>
+		<p>© Glow Beauty</p>
+    </footer>
+
+</body>
+
+</html>
+

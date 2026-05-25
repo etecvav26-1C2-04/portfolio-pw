@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profissão - Cybersecurity Engineer </title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body>
+
+<main>
+
+    <section>
+
+        <h1>Profissão: Cybersecurity Engineer</h1>
+
+        <p>
+            O profissional de Segurança da Informação é responsável por proteger
+            sistemas, redes, servidores e informações digitais contra ameaças
+            virtuais, ataques cibernéticos e invasões. Essa área se tornou
+            extremamente importante devido ao crescimento da tecnologia
+            e da quantidade de dados armazenados na internet.
+        </p>
+
+        <p>
+            Atualmente, empresas, bancos, hospitais, escolas e até órgãos
+            governamentais dependem da segurança digital para proteger
+            informações importantes e garantir o funcionamento seguro
+            de seus sistemas.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>O que faz um Cybersecurity Engineer?</h2>
+        <p>
+            Entre as principais funções da profissão estão:
+        </p>
+
+        <ul>
+            <li>Proteger redes e sistemas digitais</li>
+            <li>Monitorar possíveis ameaças virtuais</li>
+            <li>Identificar falhas de segurança</li>
+            <li>Prevenir vazamentos de informações</li>
+            <li>Desenvolver sistemas de proteção</li>
+            <li>Realizar testes de segurança</li>
+            <li>Analisar ataques cibernéticos</li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>Importância da Profissão</h2>
+
+        <p>
+            A segurança da informação é considerada uma das áreas mais
+            importantes da tecnologia atualmente. Com o crescimento
+            da internet, milhões de informações pessoais e empresariais
+            passaram a ser armazenadas digitalmente.
+        </p>
+
+        <p>
+            Por esse motivo, empresas precisam investir em profissionais
+            especializados capazes de proteger dados importantes,
+            evitando prejuízos financeiros e vazamentos de informações.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Habilidades Necessárias</h2>
+
+        <p>
+            Para atuar na área de Cybersecurity Engineer, o profissional
+            precisa desenvolver conhecimentos técnicos e habilidades
+            relacionadas à tecnologia e segurança digital.
+        </p>
+
+        <ul>
+            <li>Lógica de programação</li>
+            <li>Redes de computadores</li>
+            <li>Análise de sistemas</li>
+            <li>Segurança digital</li>
+            <li>Banco de dados</li>
+            <li>Resolução de problemas</li>
+            <li>Raciocínio lógico</li>
+            <li>Conhecimento em sistemas operacionais</li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>Locais de Trabalho</h2>
+
+        <p>
+            O profissional pode atuar em diferentes tipos de empresas
+            e organizações que utilizam tecnologia e armazenamento de dados.
+        </p>
+
+        <ul>
+            <li>Bancos</li>
+            <li>Empresas de tecnologia</li>
+            <li>Hospitais</li>
+            <li>Órgãos governamentais</li>
+            <li>Lojas virtuais</li>
+            <li>Empresas de segurança digital</li>
+            <li>Instituições financeiras</li>
+        </ul>
+
+    </section>
+
+    <section>
+
+        <h2>Objetivo da Área</h2>
+
+        <p>
+            O principal objetivo da Cybersecurity Engineer é garantir
+            a proteção das informações digitais, preservando a privacidade,
+            a integridade e a segurança dos dados utilizados por empresas
+            e usuários.
+        </p>
+
+        <p>
+            Dessa forma, a profissão contribui diretamente para a segurança
+            digital e para o funcionamento seguro da tecnologia no mundo moderno.
+        </p>
+
+    </section>
+
+</main>
+    
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

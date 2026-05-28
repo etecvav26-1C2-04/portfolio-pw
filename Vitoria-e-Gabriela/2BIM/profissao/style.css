@@ -92,3 +92,50 @@ footer p {
     font-size: 13.7 rem;
 }
 
+.profissao section {
+    background-color: #112952;
+    border:1px solid #1e3a5f; 
+    border-radius: 10px;
+    padding: 32px;
+    margin-bottom: 24px;
+}
+
+.profissao h1 {
+    color: #f0f6ff;
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.profissao ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 12px;
+}
+
+.profissao ul li {
+    color: #a8bcd4;
+    padding: 20px 20px;
+    margin-bottom: 6px;
+    border-left: 3px solid #00c8e0;
+    background-color: #0d2244;
+    border-radius: 4px;
+    line-height: 1.5;
+}
+
+.duas-colunas {
+    columns: 2;
+    gap: 20px;
+}
+
+.item {
+    background: #0d2347;
+    padding: 18px;
+    border-left: 4px solid #00d9ff;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(0, 217, 255, 0.3);
+}

@@ -9,3 +9,10 @@ th, td{
     text-align: center;
     padding: 10px 20px;
 }
+
+.fotoG{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}

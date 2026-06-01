@@ -117,19 +117,6 @@ footer p {
     gap: 20px;
 }
 
-.item{
-    background: #0d2244;
-    padding: 18px;
-    border-left: 4px solid #00d9ff;
-    border-radius: 8px;
-    transition: 0.3s;
-} 
-
-.item:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 15px rgba (0, 217, 255, 0.3);
-} 
-
 .curso section {
     background-color: #112952;
     border: 1px solid #1e3a5f;

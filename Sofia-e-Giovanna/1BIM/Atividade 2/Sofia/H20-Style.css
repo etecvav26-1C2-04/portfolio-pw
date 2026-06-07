@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Modern+Antiqua&display=swap'); 
+body { 
+  background: radial-gradient(circle, rgb(170, 0, 43), rgb(112, 5, 13)); 
+} 
+
+h1 { 
+  color: rgb(255, 223, 152);  
+  font-size: 600%;   
+  font-family: "Italianno", cursive; 
+} 
+
+p { 
+  font-family: "Modern Antiqua", serif; 
+  font-size: 20px; 
+  text-align: center; color: rgb(255, 223, 152); 
+} 
+ 
+ul { 
+  text-align: center; 
+  color: rgb(255, 223, 152); 
+} 
+ 
+li { 
+  text-align: center; 
+} 
+
+dialog { 
+  border-style: double; 
+  background: radial-gradient(circle, rgb(170, 0, 43), rgb(112, 5, 13)); 
+  border-color: rgb(255, 223, 152); 
+  font-family: "Modern Antiqua", serif; 
+  color: rgb(255, 223, 152); 
+}
+
+form { 
+  text-align: center; 
+} 
+
+input { 
+  background-color: rgb(112, 5, 13); 
+  color: rgb(255, 223, 152); 
+  font-family: "modern Antiqua", serif; 
+  text-align: center; 
+  border-color: rgb(170, 0, 43); 
+  border: 2px; 
+  border-radius: 5px; 
+} 
+
+input:focus { 
+  border-color: rgb(255, 223, 152); 
+} 

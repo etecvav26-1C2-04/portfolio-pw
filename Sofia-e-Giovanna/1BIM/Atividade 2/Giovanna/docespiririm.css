@@ -1,0 +1,111 @@
+body {
+    color-interpolation-filters:auto;
+    margin: 0;
+    background: pink;
+}
+
+header h1{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+header {
+    background-color: pink;
+    color: white;
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline;
+}
+
+nav a {
+    color: white;
+}
+
+/*Bolos*/
+.Doces{
+    text-align: center;
+    padding: 20px;
+    background-color: papayawhip;
+
+}
+
+.BolosPiririm{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    text-align: start;
+    column-count: 2;
+    column-gap: 20px;
+
+}
+.BolosPiririm div{
+    break-inside: avoid;
+    margin-bottom: 20px;
+}
+
+
+/*Imagens*/
+
+.img{
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+
+
+}
+
+.nome{
+    margin-top: 10px;
+}
+
+.Info{
+    display: block;
+    gap: 30px;
+    padding: 20px;
+    background-color: palevioletred;
+    border-radius: 10px;
+}
+
+/*Aba*/
+
+
+
+.Contatos{
+    text-align: center;
+}
+
+
+/*Menu*/
+footer{
+    background-color: palevioletred;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+.text{
+    background-color: pink;
+    padding: 2px 5px;
+}
+ 
+.Instagram{
+      background-color: pink;
+      padding: 2px 5px;
+}
+
+.colorperfil{
+    color: palevioletred;
+}
+section{
+    text-align: center;
+}
+

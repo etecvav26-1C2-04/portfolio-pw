@@ -1,744 +1,104 @@
-/* ==========================================================================
-   TREND UP AGENCY - style.css
-   Um arquivo só, usado pelas 3 páginas: index.html, quemsomos.html, contato.html
-   Índice:
-     1. Reset
-     2. Variáveis (cores e fonte)
-     3. Base (body, links, imagens)
-     4. Cabeçalho e rodapé (compartilhado por todas as páginas)
-     5. Botões (compartilhado)
-     6. Página Inicial (index.html)
-     7. Página Quem Somos (quemsomos.html)
-     8. Página Contato (contato.html)
-     9. Responsivo
-   ========================================================================== */
-
-
-/* ==========================================================================
-   1. RESET
-   ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-/* ==========================================================================
-   2. VARIÁVEIS
-   Paleta única usada em TODAS as páginas. Se precisar mudar uma cor da
-   marca, muda aqui uma vez só e atualiza o site inteiro.
-   ========================================================================== */
-:root {
-    --roxo: #8a2be2;
-    --rosa: #ff2d9a;
-    --preto: #0d0d0d;
-    --cinza-escuro: #1a1a1a;
-    --texto-cinza: #a8a3b5;
-    --borda: rgba(255, 255, 255, 0.08);
-    --gradiente: linear-gradient(90deg, var(--roxo), var(--rosa));
-}
-
-
-/* ==========================================================================
-   3. BASE
-   ========================================================================== */
-body {
-    font-family: 'Poppins', Arial, sans-serif;
-    background-color: var(--preto);
-    color: #ffffff;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-ul {
-    list-style: none;
-}
-
-/* classe usada em várias páginas pra pintar uma palavra de rosa */
-.destaque {
-    color: var(--rosa);
-}
-
-
-/* ==========================================================================
-   4. CABEÇALHO E RODAPÉ
-   Iguais nas 3 páginas.
-   ========================================================================== */
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 60px;
-    background-color: var(--cinza-escuro);
-    border-bottom: 1px solid var(--borda);
-}
-
-.logo {
-    height: 44px;
-}
-
-header nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;   /* espaço entre os links e o botão, sem precisar de margin em cada um */
-}
-
-header nav a {
-    font-weight: 500;
-    color: var(--texto-cinza);
-    transition: color 0.2s ease;
-}
-
-header nav a:hover {
-    color: #ffffff;
-}
-
-footer {
-    text-align: center;
-    padding: 25px;
-    background-color: var(--cinza-escuro);
-    color: var(--texto-cinza);
-    font-size: 14px;
-    border-top: 1px solid var(--borda);
-}
-
-
-/* ==========================================================================
-   5. BOTÕES
-   .btn-primario é usado quando o link está dentro de um <button>
-   (padrão da Home). .btn-header é usado quando é um <a> sozinho, sem
-   <button> em volta (padrão usado no menu de Quem Somos/Contato).
-   Os dois têm a mesma aparência.
-   ========================================================================== */
-
-button {
-    border: none;
-    background: none;
-    padding: 0;
-}
-
-.btn-primario a,
-.btn-header {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 8px;
-    background: var(--gradiente);
-    color: #ffffff;
-    font-weight: 600;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.btn-primario a:hover,
-.btn-header:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-}
-
-.btn-secundario a {
-    display: inline-block;
-    padding: 12px 24px;
-    border-radius: 8px;
-    border: 1px solid #ffffff40;
-    color: #ffffff;
-    font-weight: 600;
-    transition: border-color 0.2s ease;
-}
-
-.btn-secundario a:hover {
-    border-color: var(--rosa);
-}
-
-
-/* ==========================================================================
-   6. PÁGINA INICIAL (index.html)
-   ========================================================================== */
-
-/* base compartilhada: trava a largura e centraliza o conteúdo.
-   Serve tanto pro hero da Home quanto pro <main> de Quem Somos/Contato. */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 60px;
-}
-
-/* main:has(.hero-texto) detecta sozinho qual <main> é o da Home (é o único
-   que tem uma .hero-texto dentro) e some-se ao "main" de cima adicionando
-   o layout lado a lado do hero. Não precisa mexer em nada no HTML. */
-main:has(.hero-texto) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-    padding: 80px 60px;
-}
-
-.hero-texto {
-    max-width: 520px;
-}
-
-.eyebrow {
-    display: inline-block;
-    color: var(--rosa);
-    font-weight: 600;
-    font-size: 13px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 18px;
-}
-
-.hero-texto h1 {
-    font-size: 44px;
-    font-weight: 700;
-    line-height: 1.25;
-    margin-bottom: 20px;
-}
-
-.hero-texto p {
-    color: var(--texto-cinza);
-    font-size: 16px;
-    margin-bottom: 32px;
-}
-
-.hero-botoes {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-/* position: relative permite os cartões ficarem posicionados EM CIMA
-   da imagem, já que eles ficam "dentro" dela pra fins de posicionamento */
-.hero-imagem {
-    position: relative;
-    flex-shrink: 0;
-}
-
-.hero-imagem img {
-    width: 360px;
-    border-radius: 20px;
-}
-
-.cartao {
-    position: absolute;
-    background-color: var(--cinza-escuro);
-    border: 1px solid var(--borda);
-    border-radius: 12px;
-    padding: 12px 18px;
-    display: flex;
-    flex-direction: column;
-}
-
-.cartao-numero {
-    font-weight: 700;
-    font-size: 18px;
-    color: var(--rosa);
-}
-
-.cartao-texto {
-    font-size: 12px;
-    color: var(--texto-cinza);
-}
-
-.cartao-1 {
-    top: 20px;
-    right: -30px;
-}
-
-.cartao-2 {
-    bottom: 20px;
-    left: -30px;
-}
-
-/* seção com o slogan, no lugar onde antes ficavam os logos de marcas */
-.marcas {
-    text-align: center;
-    padding: 50px 40px;
-    background-color: var(--cinza-escuro);
-}
-
-.slogan {
-    font-size: 24px;
-    font-weight: 600;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.solucoes {
-    text-align: center;
-    padding: 90px 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.solucoes h2 {
-    font-size: 32px;
-    margin-bottom: 50px;
-}
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-}
-
-.card {
-    background-color: var(--cinza-escuro);
-    border: 1px solid var(--borda);
-    border-radius: 16px;
-    padding: 35px 25px;
-    text-align: left;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-    border-color: var(--rosa);
-}
-
-.card-icone {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    background: var(--gradiente);
-    border-radius: 12px;
-    margin-bottom: 20px;
-}
-
-.card h3 {
-    font-size: 18px;
-    margin-bottom: 12px;
-}
-
-.card p {
-    font-size: 14px;
-    color: var(--texto-cinza);
-}
-
-
-/* ==========================================================================
-   7. PÁGINA QUEM SOMOS (quemsomos.html)
-   ========================================================================== */
-
-.banner-quem-somos {
-    text-align: center;
-    padding: 100px 0 80px;
-    max-width: 780px;
-    margin: 0 auto;
-}
-
-.categoria {
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: var(--texto-cinza);
-    margin-bottom: 20px;
-}
-
-.banner-quem-somos h1 {
-    font-size: 50px;
-    font-weight: 800;
-    line-height: 1.15;
-    margin-bottom: 24px;
-}
-
-.banner-quem-somos .descricao {
-    font-size: 17px;
-    color: var(--texto-cinza);
-}
-
-.historia {
-    padding: 60px 0;
-    border-top: 1px solid var(--borda);
-    max-width: 820px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.historia h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 24px;
-}
-
-.historia p {
-    color: var(--texto-cinza);
-    margin-bottom: 18px;
-}
-
-.missao-visao-valores {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    padding: 60px 0;
-}
-
-.card-info {
-    background-color: var(--cinza-escuro);
-    border: 1px solid var(--borda);
-    border-radius: 16px;
-    padding: 36px 28px;
-    transition: border-color 0.2s ease, transform 0.2s ease;
-}
-
-.card-info:hover {
-    border-color: var(--rosa);
-    transform: translateY(-4px);
-}
-
-.card-info h2 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 14px;
-    color: var(--rosa);
-}
-
-.card-info p {
-    color: var(--texto-cinza);
-    font-size: 15px;
-}
-
-.card-info ul li {
-    color: var(--texto-cinza);
-    font-size: 15px;
-    padding: 4px 0 4px 18px;
-    position: relative;
-}
-
-/* bolinha colorida antes de cada item da lista, no lugar do "•" padrão */
-.card-info ul li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 12px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--gradiente);
-}
-
-.equipe {
-    padding: 60px 0 100px;
-    border-top: 1px solid var(--borda);
-    text-align: center;
-}
-
-.equipe h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 44px;
-}
-
-.cards-equipe {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-}
-
-.cards-equipe .card {
-    background-color: var(--cinza-escuro);
-    border: 1px solid var(--borda);
-    border-radius: 16px;
-    padding: 28px 20px;
-    text-align: center;
-    transition: border-color 0.2s ease, transform 0.2s ease;
-}
-
-.cards-equipe .card:hover {
-    border-color: var(--rosa);
-    transform: translateY(-4px);
-}
-
-.cards-equipe .card img {
-    width: 96px;
-    height: 96px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 0 auto 18px;
-    border: 2px solid var(--rosa);
-}
-
-.cards-equipe .card h3 {
-    font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 4px;
-}
-
-.cards-equipe .card .cargo {
-    color: var(--rosa);
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 12px;
-}
-
-.cards-equipe .card p:not(.cargo) {
-    color: var(--texto-cinza);
-    font-size: 14px;
-    margin-bottom: 16px;
-}
-
-.cards-equipe .card a {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 600;
-    color: #ffffff;
-    border: 1px solid var(--borda);
-    border-radius: 8px;
-    padding: 8px 18px;
-    transition: background 0.2s ease, border-color 0.2s ease;
-}
-
-.cards-equipe .card a:hover {
-    background: var(--gradiente);
-    border-color: transparent;
-}
-
-
-/* ==========================================================================
-   8. PÁGINA CONTATO (contato.html)
-   ========================================================================== */
-
-.banner-contato {
-    text-align: center;
-    padding: 100px 0 80px;
-    max-width: 780px;
-    margin: 0 auto;
-}
-
-.banner-contato h1 {
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 1.15;
-    margin-bottom: 24px;
-}
-
-.banner-contato .descricao {
-    font-size: 17px;
-    color: var(--texto-cinza);
-}
-
-.contato {
-    display: grid;
-    grid-template-columns: 1fr 1.3fr;
-    gap: 24px;
-    padding: 20px 0 80px;
-    align-items: start;
-}
-
-.informacoes,
-.formulario {
-    background-color: var(--cinza-escuro);
-    border: 1px solid var(--borda);
-    border-radius: 16px;
-    padding: 36px 32px;
-}
-
-.informacoes h2,
-.formulario h2 {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 24px;
-}
-
-.informacoes p {
-    color: var(--texto-cinza);
-    font-size: 15px;
-    margin-bottom: 22px;
-}
-
-.informacoes p strong {
-    display: inline-block;
-    color: #ffffff;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-
-.formulario form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.formulario input,
-.formulario textarea {
-    width: 100%;
-    background-color: var(--preto);
-    border: 1px solid var(--borda);
-    border-radius: 8px;
-    padding: 14px 16px;
-    color: #ffffff;
-    font-family: inherit;
-    font-size: 15px;
-    transition: border-color 0.2s ease;
-}
-
-.formulario input::placeholder,
-.formulario textarea::placeholder {
-    color: var(--texto-cinza);
-}
-
-.formulario input:focus,
-.formulario textarea:focus {
-    outline: none;
-    border-color: var(--rosa);
-}
-
-.formulario textarea {
-    resize: vertical;
-}
-
-.formulario button {
-    align-self: flex-start;
-    background: var(--gradiente);
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 15px;
-    padding: 14px 28px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.formulario button:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-}
-
-.redes {
-    text-align: center;
-    padding: 60px 0 100px;
-    border-top: 1px solid var(--borda);
-}
-
-.redes h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 14px;
-}
-
-.redes p {
-    color: var(--texto-cinza);
-    margin-bottom: 32px;
-}
-
-.links-redes {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.links-redes a {
-    display: inline-block;
-    padding: 12px 26px;
-    border: 1px solid var(--borda);
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
-    color: #ffffff;
-    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-}
-
-.links-redes a:hover {
-    background: var(--gradiente);
-    border-color: transparent;
-    transform: translateY(-2px);
-}
-
-
-/* ==========================================================================
-   9. RESPONSIVO
-   Duas larguras cobrem as 3 páginas: 1024px (tablet) e 768px (celular).
-   ========================================================================== */
-
-@media (max-width: 1024px) {
-
-    /* Página Inicial */
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Quem Somos */
-    .cards-equipe {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-@media (max-width: 768px) {
-
-    /* compartilhado por todas as páginas */
-    header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-    }
-
-    header nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    main {
-        padding: 0 24px;
-    }
-
-    /* Página Inicial */
-    main:has(.hero-texto) {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding: 50px 24px;
-    }
-
-    .hero-botoes {
-        justify-content: center;
-    }
-
-    .cartao-1,
-    .cartao-2 {
-        display: none;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    /* Quem Somos */
-    .banner-quem-somos h1 {
-        font-size: 32px;
-    }
-
-    .missao-visao-valores {
-        grid-template-columns: 1fr;
-    }
-
-    .cards-equipe {
-        grid-template-columns: 1fr;
-    }
-
-    /* Contato */
-    .contato {
-        grid-template-columns: 1fr;
-    }
-
-    .banner-contato h1 {
-        font-size: 32px;
-    }
-
-    .formulario button {
-        align-self: stretch;
-    }
-
-}
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Trend Up | Agency</title>
+</head>
+
+<body>
+    <header>
+    <img src="img/logo.png" alt="logo" height="70px" width="195px">
+
+    <nav>
+        <a href="index.html"> Início </a>
+        <a href="servicos.html"> Serviços </a>
+        <a href="quemsomos.html"> Quem Somos</a>
+        <a href="contato.html"> Contato </a>
+
+        <button class="btn-primario">
+            <a href="contato.html"> Fale conosco </a>
+        </button>
+    </nav>
+</header>
+
+    <!-- ===================== HERO ===================== -->
+    <main>
+        <div class="hero-texto">
+            <p class="eyebrow">Agência de Influência</p>
+            <h1>Conectamos marcas a <span class="destaque">influências</span> que movem pessoas.</h1>
+            <p>Estratégias criativas com influenciadores que geram engajamento, alcance e resultados reais.</p>
+
+            <div class="hero-botoes">
+                <button class="btn-primario">
+                    <a href="contato.html"> Falar com especialista </a>
+                </button>
+                <button class="btn-secundario">
+                    <a href="servicos.html"> Conheça nossos serviços </a>
+                </button>
+            </div>
+        </div>
+
+        <div class="hero-imagem">
+            <img src="img/virginia.png" alt="influenciadora parceira da Trend Up">
+
+            <!-- cartões flutuantes com números, por cima da foto -->
+            <div class="cartao cartao-1">
+                <span class="cartao-numero">+2.5M</span>
+                <span class="cartao-texto">De alcance gerado</span>
+            </div>
+            <div class="cartao cartao-2">
+                <span class="cartao-numero">98%</span>
+                <span class="cartao-texto">Taxa de engajamento</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===================== SLOGAN ===================== -->
+    <section class="marcas">
+        <p class="slogan">Não vendemos anúncios. Criamos conexões que viram resultado.</p>
+    </section>
+
+    <!-- ===================== SOLUÇÕES / SERVIÇOS ===================== -->
+    <section class="solucoes">
+        <p class="eyebrow eyebrow-centro">O que a Trend Up faz por você</p>
+        <h2>Soluções completas para campanhas de <span class="destaque">influência</span></h2>
+
+        <div class="cards">
+            <div class="card">
+                <div class="card-icone">🤝</div>
+                <h3>Gestão de Influenciadores</h3>
+                <p>Selecionamos os melhores perfis para sua marca, com estratégia e alinhamento total.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icone">🎨</div>
+                <h3>Campanhas Criativas</h3>
+                <p>Criamos campanhas autênticas, criativas e focadas em resultado.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icone">📈</div>
+                <h3>Performance &amp; Resultados</h3>
+                <p>Acompanhamento completo, com relatórios detalhados e foco em ROI.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icone">✨</div>
+                <h3>Conteúdo que Conecta</h3>
+                <p>Produzimos conteúdo que gera identificação, engajamento e conversão.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© Trend Up Agency - 2026</p>
+    </footer>
+</body>
+</html>

@@ -24,6 +24,17 @@
     box-sizing: border-box;
 }
 
+/* button, input, textarea e select NÃO herdam a fonte do body por padrão
+   no navegador (é o estilo nativo do sistema operacional). Por isso a
+   fonte "trocava" nos botões do cabeçalho, do hero e do formulário.
+   Forçando herdar aqui, uma vez só, padroniza a fonte em todas as páginas. */
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
 
 /* ==========================================================================
    2. VARIÁVEIS

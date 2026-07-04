@@ -1,3 +1,4 @@
+
 /* ==========================================================
    TREND UP - style.css
    ========================================================== */
@@ -381,4 +382,548 @@ footer {
         grid-template-columns: 1fr;   /* 1 coluna só em telas pequenas */
     }
 
+}
+/* ==========================================================================
+   TrendUp Agency — style.css
+   Identidade visual: fundo escuro, gradiente roxo→rosa, tipografia bold.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    /* Cores */
+    --cor-bg: #0d0d10;
+    --cor-bg-header: #111114;
+    --cor-card: #17171c;
+    --cor-borda: rgba(255, 255, 255, 0.08);
+    --cor-texto: #ffffff;
+    --cor-texto-secundario: #a3a3ad;
+    --cor-rosa: #ff2f87;
+    --cor-roxo: #8b2ff7;
+    --gradiente-cta: linear-gradient(90deg, var(--cor-roxo), var(--cor-rosa));
+
+    /* Tipografia */
+    --fonte-titulo: 'Poppins', sans-serif;
+    --fonte-texto: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-bg);
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background-color: var(--cor-bg-header);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.logo {
+    height: 42px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+header nav a {
+    font-size: 0.95rem;
+    color: var(--cor-texto-secundario);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: var(--cor-texto);
+}
+
+.btn-header {
+    background: var(--gradiente-cta);
+    color: var(--cor-texto) !important;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-header:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Banner — Quem Somos
+   ========================================================================== */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.banner-quem-somos {
+    text-align: center;
+    padding: 100px 0 80px;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.categoria {
+    font-family: var(--fonte-titulo);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 20px;
+}
+
+.banner-quem-somos h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.banner-quem-somos .descricao {
+    font-size: 1.05rem;
+    color: var(--cor-texto-secundario);
+}
+
+/* ==========================================================================
+   Nossa História
+   ========================================================================== */
+
+.historia {
+    padding: 60px 0;
+    border-top: 1px solid var(--cor-borda);
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.historia h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.historia p {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Missão, Visão e Valores
+   ========================================================================== */
+
+.missao-visao-valores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 60px 0;
+}
+
+.card-info {
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 16px;
+    padding: 36px 28px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card-info:hover {
+    border-color: var(--cor-rosa);
+    transform: translateY(-4px);
+}
+
+.card-info h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: var(--cor-rosa);
+}
+
+.card-info p {
+    color: var(--cor-texto-secundario);
+    font-size: 0.95rem;
+}
+
+.card-info ul li {
+    color: var(--cor-texto-secundario);
+    font-size: 0.95rem;
+    padding: 4px 0;
+    position: relative;
+    padding-left: 18px;
+}
+
+.card-info ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gradiente-cta);
+}
+
+/* ==========================================================================
+   Nossa Equipe
+   ========================================================================== */
+
+.equipe {
+    padding: 60px 0 100px;
+    border-top: 1px solid var(--cor-borda);
+}
+
+.equipe h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 44px;
+}
+
+.cards-equipe {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.cards-equipe .card {
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.cards-equipe .card:hover {
+    border-color: var(--cor-rosa);
+    transform: translateY(-4px);
+}
+
+.cards-equipe .card img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 18px;
+    border: 2px solid var(--cor-rosa);
+}
+
+.cards-equipe .card h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.cards-equipe .card .cargo {
+    color: var(--cor-rosa);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.cards-equipe .card p:not(.cargo) {
+    color: var(--cor-texto-secundario);
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+.cards-equipe .card a {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 8px 18px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.cards-equipe .card a:hover {
+    background: var(--gradiente-cta);
+    border-color: transparent;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+    text-align: center;
+    padding: 28px 0;
+    border-top: 1px solid var(--cor-borda);
+    color: var(--cor-texto-secundario);
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   Responsivo
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .cards-equipe {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px 24px;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px 24px;
+    }
+
+    main {
+        padding: 0 24px;
+    }
+
+    .banner-quem-somos h1 {
+        font-size: 2.2rem;
+    }
+
+    .missao-visao-valores {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-equipe {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   Banner — Contato
+   ========================================================================== */
+
+.banner-contato {
+    text-align: center;
+    padding: 100px 0 80px;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.banner-contato h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.banner-contato .descricao {
+    font-size: 1.05rem;
+    color: var(--cor-texto-secundario);
+}
+
+/* ==========================================================================
+   Contato — informações + formulário
+   ========================================================================== */
+
+.contato {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 24px;
+    padding: 20px 0 80px;
+    align-items: start;
+}
+
+.informacoes,
+.formulario {
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 16px;
+    padding: 36px 32px;
+}
+
+.informacoes h2,
+.formulario h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.informacoes p {
+    color: var(--cor-texto-secundario);
+    font-size: 0.95rem;
+    margin-bottom: 22px;
+}
+
+.informacoes p strong {
+    display: inline-block;
+    color: var(--cor-texto);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    background-color: var(--cor-bg);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 14px 16px;
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease;
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+    color: var(--cor-texto-secundario);
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: var(--cor-rosa);
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario button {
+    align-self: flex-start;
+    background: var(--gradiente-cta);
+    border: none;
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 14px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.formulario button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Redes sociais
+   ========================================================================== */
+
+.redes {
+    text-align: center;
+    padding: 60px 0 100px;
+    border-top: 1px solid var(--cor-borda);
+}
+
+.redes h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.redes p {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 32px;
+}
+
+.links-redes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.links-redes a {
+    display: inline-block;
+    padding: 12px 26px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--cor-texto);
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.links-redes a:hover {
+    background: var(--gradiente-cta);
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Responsivo — Contato
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .contato {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-contato h1 {
+        font-size: 2.2rem;
+    }
+
+    .formulario button {
+        align-self: stretch;
+    }
+}
+
+/* ==========================================================================
+   Correção: o CSS da home define "main { display: flex; ... }" lá em cima,
+   o que faz as seções das páginas internas (Quem Somos, Contato) tentarem
+   ficar lado a lado. Esse bloco sobrescreve só o display, sem mexer no resto.
+   ========================================================================== */
+
+main {
+    display: block;
 }

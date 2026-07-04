@@ -771,17 +771,23 @@ main:has(.hero-texto) {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Quem Somos */
-    .cards-equipe {
-        grid-template-columns: repeat(2, 1fr);
     }
 
+    /* Quem Somos */
+    .cards-equipe {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;   /* centraliza o grid no eixo horizontal */
+    margin: 0 auto;             /* se o container tiver largura definida */
+    /* remove width/height daqui, isso é o container */
+}
+.cards-equipe .card {
+    width: 600px;
+    height: 400px;
+}
     /* Serviços */
     .cards-estatisticas {
         grid-template-columns: repeat(2, 1fr);
     }
-
-}
 
 @media (max-width: 768px) {
 

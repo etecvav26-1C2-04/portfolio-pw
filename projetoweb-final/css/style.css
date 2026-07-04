@@ -374,32 +374,6 @@ main:has(.hero-texto) {
     color: var(--texto-cinza);
 }
 
-.historia {
-    padding: 60px 0;
-    border-top: 1px solid var(--borda);
-    max-width: 820px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.historia h2 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 24px;
-}
-
-.historia p {
-    color: var(--texto-cinza);
-    margin-bottom: 18px;
-}
-
-.missao-visao-valores {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    padding: 60px 0;
-}
-
 .card-info {
     background-color: var(--cinza-escuro);
     border: 1px solid var(--borda);

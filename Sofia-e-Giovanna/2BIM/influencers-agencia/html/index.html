@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
 
     <title>Trend Up | Agency</title>
@@ -11,51 +14,103 @@
 
 <body>
     <header>
-        <img src="img/logo.png" alt="logo" height="150px" width="250px">
-    <nav>
-        <a href="index.html"> Início </a>
-        <a href="servicos.html"> Serviços </a>
-        <a href="quemsomos.html"> Quem Somos</a>
-        <a href="contato.html"> Contato </a>
-
-    <button>
-        <a href="contato.html"> Fale com um especialista </a>
-    </button>
-    </nav>
-    </header>
-
-    <main>
-        <div class="virginia">
-            <img src="img/virginia.png" alt="virginia" width="300px" height="200px">
+        <div class="logo">
+            <span class="logo-texto">Trend<span class="logo-destaque">Up</span></span>
+            <span class="logo-sub">Agency</span>
         </div>
 
-        <p>AGÊNCIA DE INFLUENCERS</p>
-        <h1>Conectamos marcas a influenciadores que movem pessoas.</h1>
-        <p>Estratégias criativas e campanhas completas que geram alcance, engajamento e resultados reais.</p>
-        <button>
-            <a href="contato.html"> Fale com um especialista </a>
-        </button>
-        <button>
-            <a href="servicos.html"> Conheça nossos serviços </a>
-        </button>
+        <nav>
+            <a href="index.html"> Início </a>
+            <a href="servicos.html"> Serviços </a>
+            <a href="quemsomos.html"> Quem Somos</a>
+            <a href="contato.html"> Contato </a>
+
+            <button class="btn-primario">
+                <a href="contato.html"> Fale conosco </a>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ===================== HERO ===================== -->
+    <main>
+        <div class="hero-texto">
+            <p class="eyebrow">Agência de Influência</p>
+            <h1>Conectamos marcas a <span class="destaque">influências</span> que movem pessoas.</h1>
+            <p>Estratégias criativas com influenciadores que geram engajamento, alcance e resultados reais.</p>
+
+            <div class="hero-botoes">
+                <button class="btn-primario">
+                    <a href="contato.html"> Falar com especialista </a>
+                </button>
+                <button class="btn-secundario">
+                    <a href="servicos.html"> Conheça nossos serviços </a>
+                </button>
+            </div>
+        </div>
+
+        <div class="hero-imagem">
+            <img src="img/virginia.png" alt="influenciadora parceira da Trend Up">
+
+            <!-- cartões flutuantes com números, por cima da foto -->
+            <div class="cartao cartao-1">
+                <span class="cartao-numero">+2.5M</span>
+                <span class="cartao-texto">De alcance gerado</span>
+            </div>
+            <div class="cartao cartao-2">
+                <span class="cartao-numero">98%</span>
+                <span class="cartao-texto">Taxa de engajamento</span>
+            </div>
+        </div>
     </main>
 
+    <!-- ===================== MARCAS ===================== -->
+    <section class="marcas">
+        <h5>Marcas que confiam</h5>
+        <div class="marcas-lista">
+            <img src="img/marcas/nike.webp" alt="nike">
+            <img src="img/marcas/coca-cola.png" alt="coca-cola">
+            <img src="img/marcas/samsung.webp" alt="samsung">
+            <img src="img/marcas/oboticario.png" alt="o boticario">
+            <img src="img/marcas/redbull.png" alt="red bull">
+            <img src="img/marcas/twitch.png" alt="twitch">
+            <img src="img/marcas/wepink.png" alt="wepink">
+        </div>
+    </section>
 
+    <!-- ===================== SOLUÇÕES / SERVIÇOS ===================== -->
+    <section class="solucoes">
+        <p class="eyebrow eyebrow-centro">O que a Trend Up faz por você</p>
+        <h2>Soluções completas para campanhas de <span class="destaque">influência</span></h2>
 
+        <div class="cards">
+            <div class="card">
+                <div class="card-icone">🤝</div>
+                <h3>Gestão de Influenciadores</h3>
+                <p>Selecionamos os melhores perfis para sua marca, com estratégia e alinhamento total.</p>
+            </div>
 
-    <section>
-        <h5>MARCAS QUE CONFIAM</h5>
-        <img src="img/marcas/nike.webp" alt="nike" width="100px" height="75px">
-        <img src="img/marcas/coca-cola.png" alt="coca" width="100px" height="75px">
-        <img src="img/marcas/samsung.webp" alt="samsung" width="100px" height="75px">
-        <img src="img/marcas/oboticario.png" alt="oboticario" width="100px" height="75px">
-        <img src="img/marcas/redbull.png" alt="redbull" width="100px" height="75px">
-        <img src="img/marcas/twitch.png" alt="twitch" width="100px" height="75px">
-        <img src="img/marcas/wepink.png" alt="wepink" width="140px" height="75px">
+            <div class="card">
+                <div class="card-icone">🎨</div>
+                <h3>Campanhas Criativas</h3>
+                <p>Criamos campanhas autênticas, criativas e focadas em resultado.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icone">📈</div>
+                <h3>Performance &amp; Resultados</h3>
+                <p>Acompanhamento completo, com relatórios detalhados e foco em ROI.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icone">✨</div>
+                <h3>Conteúdo que Conecta</h3>
+                <p>Produzimos conteúdo que gera identificação, engajamento e conversão.</p>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>© Trend Up Agency- 2026</p>
+        <p>© Trend Up Agency - 2026</p>
     </footer>
 </body>
 </html>

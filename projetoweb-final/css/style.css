@@ -1,32 +1,53 @@
+/* ==========================================================================
+   TREND UP AGENCY - style.css
+   Um arquivo só, usado pelas 3 páginas: index.html, quemsomos.html, contato.html
+   Índice:
+     1. Reset
+     2. Variáveis (cores e fonte)
+     3. Base (body, links, imagens)
+     4. Cabeçalho e rodapé (compartilhado por todas as páginas)
+     5. Botões (compartilhado)
+     6. Página Inicial (index.html)
+     7. Página Quem Somos (quemsomos.html)
+     8. Página Contato (contato.html)
+     9. Responsivo
+   ========================================================================== */
 
-/* ==========================================================
-   TREND UP - style.css
-   ========================================================== */
 
-/* 1. RESET
-   Zera margem/espaçamento padrão do navegador, pra começar do zero. */
+/* ==========================================================================
+   1. RESET
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* padding e borda entram DENTRO da largura do elemento */
+    box-sizing: border-box;
 }
 
-/* 2. CORES DA MARCA (variáveis)
-   Guardamos as cores com um nome, pra reaproveitar em várias regras
-   sem repetir o código da cor toda hora. Uso: var(--nome) */
+
+/* ==========================================================================
+   2. VARIÁVEIS
+   Paleta única usada em TODAS as páginas. Se precisar mudar uma cor da
+   marca, muda aqui uma vez só e atualiza o site inteiro.
+   ========================================================================== */
 :root {
     --roxo: #8a2be2;
     --rosa: #ff2d9a;
     --preto: #0d0d0d;
     --cinza-escuro: #1a1a1a;
     --texto-cinza: #a8a3b5;
+    --borda: rgba(255, 255, 255, 0.08);
+    --gradiente: linear-gradient(90deg, var(--roxo), var(--rosa));
 }
 
-/* 3. ESTILO GERAL */
+
+/* ==========================================================================
+   3. BASE
+   ========================================================================== */
 body {
     font-family: 'Poppins', Arial, sans-serif;
     background-color: var(--preto);
     color: #ffffff;
+    line-height: 1.6;
 }
 
 a {
@@ -34,15 +55,25 @@ a {
     color: inherit;
 }
 
-/* classe usada em várias partes do site pra pintar uma palavra de rosa */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* classe usada em várias páginas pra pintar uma palavra de rosa */
 .destaque {
     color: var(--rosa);
 }
 
 
-/* ==========================================================
-   4. CABEÇALHO
-   ========================================================== */
+/* ==========================================================================
+   4. CABEÇALHO E RODAPÉ
+   Iguais nas 3 páginas.
+   ========================================================================== */
 
 header {
     display: flex;
@@ -50,53 +81,46 @@ header {
     justify-content: space-between;
     padding: 20px 60px;
     background-color: var(--cinza-escuro);
-    border-bottom: 1px solid #ffffff1a;
+    border-bottom: 1px solid var(--borda);
 }
 
-/* logo em texto (sem imagem) */
 .logo {
-    display: flex;
-    flex-direction: column;   /* nome em cima, "Agency" embaixo */
-    line-height: 1.1;
+    height: 44px;
 }
 
-.logo-texto {
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.logo-destaque {
-    color: var(--rosa);
-}
-
-.logo-sub {
-    font-size: 12px;
-    color: var(--texto-cinza);
-    letter-spacing: 1px;
-}
-
-nav {
+header nav {
     display: flex;
     align-items: center;
+    gap: 30px;   /* espaço entre os links e o botão, sem precisar de margin em cada um */
 }
 
-nav a {
-    margin-left: 30px;
+header nav a {
     font-weight: 500;
     color: var(--texto-cinza);
     transition: color 0.2s ease;
 }
 
-nav a:hover {
+header nav a:hover {
     color: #ffffff;
 }
 
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--cinza-escuro);
+    color: var(--texto-cinza);
+    font-size: 14px;
+    border-top: 1px solid var(--borda);
+}
 
-/* ==========================================================
+
+/* ==========================================================================
    5. BOTÕES
-   O <button> do HTML tem um <a> dentro, então quem recebe a cor
-   e o tamanho de verdade é o <a>.
-   ========================================================== */
+   .btn-primario é usado quando o link está dentro de um <button>
+   (padrão da Home). .btn-header é usado quando é um <a> sozinho, sem
+   <button> em volta (padrão usado no menu de Quem Somos/Contato).
+   Os dois têm a mesma aparência.
+   ========================================================================== */
 
 button {
     border: none;
@@ -104,23 +128,26 @@ button {
     padding: 0;
 }
 
-.btn-primario a {
+.btn-primario a,
+.btn-header {
     display: inline-block;
-    padding: 14px 28px;
+    padding: 12px 24px;
     border-radius: 8px;
-    background: linear-gradient(90deg, var(--roxo), var(--rosa));
+    background: var(--gradiente);
     color: #ffffff;
     font-weight: 600;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.btn-primario a:hover {
-    opacity: 0.85;
+.btn-primario a:hover,
+.btn-header:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
 }
 
 .btn-secundario a {
     display: inline-block;
-    padding: 14px 28px;
+    padding: 12px 24px;
     border-radius: 8px;
     border: 1px solid #ffffff40;
     color: #ffffff;
@@ -132,25 +159,28 @@ button {
     border-color: var(--rosa);
 }
 
-nav button a {
-    padding: 10px 22px;
-    margin-left: 30px;
-    font-size: 14px;
+
+/* ==========================================================================
+   6. PÁGINA INICIAL (index.html)
+   ========================================================================== */
+
+/* base compartilhada: trava a largura e centraliza o conteúdo.
+   Serve tanto pro hero da Home quanto pro <main> de Quem Somos/Contato. */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
 }
 
-
-/* ==========================================================
-   6. HERO (seção principal, dentro do <main>)
-   ========================================================== */
-
-main {
+/* main:has(.hero-texto) detecta sozinho qual <main> é o da Home (é o único
+   que tem uma .hero-texto dentro) e some-se ao "main" de cima adicionando
+   o layout lado a lado do hero. Não precisa mexer em nada no HTML. */
+main:has(.hero-texto) {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 60px;
-    max-width: 1200px;   /* trava a largura em telas grandes */
-    margin: 0 auto;      /* centraliza esse bloco na página */
-    padding: 80px 40px;
+    padding: 80px 60px;
 }
 
 .hero-texto {
@@ -186,24 +216,22 @@ main {
     flex-wrap: wrap;
 }
 
-/* container da foto - "position: relative" é o que permite os
-   cartões ficarem posicionados EM CIMA da imagem, dentro dele */
+/* position: relative permite os cartões ficarem posicionados EM CIMA
+   da imagem, já que eles ficam "dentro" dela pra fins de posicionamento */
 .hero-imagem {
     position: relative;
-    flex-shrink: 0;    /* impede a imagem de ser espremida quando a tela aperta */
+    flex-shrink: 0;
 }
 
 .hero-imagem img {
-    width: 400px;
+    width: 360px;
     border-radius: 20px;
-    display: block;
 }
 
-/* cartões flutuantes com número + texto, por cima da foto */
 .cartao {
-    position: absolute;         /* tira o cartão do fluxo normal da página */
+    position: absolute;
     background-color: var(--cinza-escuro);
-    border: 1px solid #ffffff1a;
+    border: 1px solid var(--borda);
     border-radius: 12px;
     padding: 12px 18px;
     display: flex;
@@ -221,7 +249,6 @@ main {
     color: var(--texto-cinza);
 }
 
-/* posição de cada cartão, um em cima à direita, outro embaixo à esquerda */
 .cartao-1 {
     top: 20px;
     right: -30px;
@@ -232,48 +259,25 @@ main {
     left: -30px;
 }
 
-
-/* ==========================================================
-   7. SEÇÃO DE MARCAS
-   ========================================================== */
-
+/* seção com o slogan, no lugar onde antes ficavam os logos de marcas */
 .marcas {
     text-align: center;
     padding: 50px 40px;
     background-color: var(--cinza-escuro);
 }
 
-.marcas h5 {
-    color: var(--texto-cinza);
-    font-size: 13px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-
-/* frase de destaque que fica sozinha na caixinha */
 .slogan {
     font-size: 24px;
     font-weight: 600;
     max-width: 700px;
     margin: 0 auto;
-    color: #ffffff;
 }
-
-
-/* ==========================================================
-   8. SOLUÇÕES (cards de serviço)
-   ========================================================== */
 
 .solucoes {
     text-align: center;
-    padding: 90px 40px;
+    padding: 90px 60px;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.eyebrow-centro {
-    display: block;   /* pra conseguir centralizar com text-align do pai */
 }
 
 .solucoes h2 {
@@ -281,7 +285,6 @@ main {
     margin-bottom: 50px;
 }
 
-/* grid divide o espaço em 4 colunas iguais, uma pra cada card */
 .cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -290,7 +293,7 @@ main {
 
 .card {
     background-color: var(--cinza-escuro);
-    border: 1px solid #ffffff1a;
+    border: 1px solid var(--borda);
     border-radius: 16px;
     padding: 35px 25px;
     text-align: left;
@@ -298,7 +301,7 @@ main {
 }
 
 .card:hover {
-    transform: translateY(-6px);   /* o card "sobe" um pouquinho no hover */
+    transform: translateY(-6px);
     border-color: var(--rosa);
 }
 
@@ -309,7 +312,7 @@ main {
     align-items: center;
     justify-content: center;
     font-size: 22px;
-    background: linear-gradient(135deg, var(--roxo), var(--rosa));
+    background: var(--gradiente);
     border-radius: 12px;
     margin-bottom: 20px;
 }
@@ -325,172 +328,9 @@ main {
 }
 
 
-/* ==========================================================
-   9. RODAPÉ
-   ========================================================== */
-
-footer {
-    text-align: center;
-    padding: 25px;
-    background-color: var(--cinza-escuro);
-    color: var(--texto-cinza);
-    font-size: 14px;
-}
-
-
-/* ==========================================================
-   11. RESPONSIVO (telas de celular e tablet)
-   Essas regras só valem abaixo da largura indicada e sobrescrevem
-   as de cima nesse caso.
-   ========================================================== */
-
-@media (max-width: 900px) {
-
-    .cards {
-        grid-template-columns: repeat(2, 1fr);  /* 2 colunas em telas médias */
-    }
-
-}
-
-@media (max-width: 800px) {
-
-    header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-    }
-
-    nav a, nav button a {
-        margin-left: 15px;
-    }
-
-    main {
-        flex-direction: column-reverse;   /* imagem primeiro, texto depois */
-        text-align: center;
-        padding: 50px 20px;
-    }
-
-    .hero-botoes {
-        justify-content: center;
-    }
-
-    .cartao-1, .cartao-2 {
-        display: none;   /* esconde os cartões flutuantes no celular, ficaria apertado */
-    }
-
-    .cards {
-        grid-template-columns: 1fr;   /* 1 coluna só em telas pequenas */
-    }
-
-}
 /* ==========================================================================
-   TrendUp Agency — style.css
-   Identidade visual: fundo escuro, gradiente roxo→rosa, tipografia bold.
+   7. PÁGINA QUEM SOMOS (quemsomos.html)
    ========================================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
-
-:root {
-    /* Cores */
-    --cor-bg: #0d0d10;
-    --cor-bg-header: #111114;
-    --cor-card: #17171c;
-    --cor-borda: rgba(255, 255, 255, 0.08);
-    --cor-texto: #ffffff;
-    --cor-texto-secundario: #a3a3ad;
-    --cor-rosa: #ff2f87;
-    --cor-roxo: #8b2ff7;
-    --gradiente-cta: linear-gradient(90deg, var(--cor-roxo), var(--cor-rosa));
-
-    /* Tipografia */
-    --fonte-titulo: 'Poppins', sans-serif;
-    --fonte-texto: 'Inter', sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: var(--cor-bg);
-    color: var(--cor-texto);
-    font-family: var(--fonte-texto);
-    line-height: 1.6;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-ul {
-    list-style: none;
-}
-
-/* ==========================================================================
-   Header
-   ========================================================================== */
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 60px;
-    background-color: var(--cor-bg-header);
-    border-bottom: 1px solid var(--cor-borda);
-}
-
-.logo {
-    height: 42px;
-}
-
-header nav {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-header nav a {
-    font-size: 0.95rem;
-    color: var(--cor-texto-secundario);
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-header nav a:hover {
-    color: var(--cor-texto);
-}
-
-.btn-header {
-    background: var(--gradiente-cta);
-    color: var(--cor-texto) !important;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.btn-header:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-}
-
-/* ==========================================================================
-   Banner — Quem Somos
-   ========================================================================== */
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 60px;
-}
 
 .banner-quem-somos {
     text-align: center;
@@ -500,55 +340,43 @@ main {
 }
 
 .categoria {
-    font-family: var(--fonte-titulo);
-    font-size: 0.85rem;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: 3px;
-    color: var(--cor-texto-secundario);
+    color: var(--texto-cinza);
     margin-bottom: 20px;
 }
 
 .banner-quem-somos h1 {
-    font-family: var(--fonte-titulo);
-    font-size: 3.2rem;
+    font-size: 50px;
     font-weight: 800;
     line-height: 1.15;
     margin-bottom: 24px;
 }
 
 .banner-quem-somos .descricao {
-    font-size: 1.05rem;
-    color: var(--cor-texto-secundario);
+    font-size: 17px;
+    color: var(--texto-cinza);
 }
-
-/* ==========================================================================
-   Nossa História
-   ========================================================================== */
 
 .historia {
     padding: 60px 0;
-    border-top: 1px solid var(--cor-borda);
+    border-top: 1px solid var(--borda);
     max-width: 820px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .historia h2 {
-    font-family: var(--fonte-titulo);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 24px;
-    text-align: center;
 }
 
 .historia p {
-    color: var(--cor-texto-secundario);
+    color: var(--texto-cinza);
     margin-bottom: 18px;
-    text-align: center;
 }
-
-/* ==========================================================================
-   Missão, Visão e Valores
-   ========================================================================== */
 
 .missao-visao-valores {
     display: grid;
@@ -558,39 +386,38 @@ main {
 }
 
 .card-info {
-    background-color: var(--cor-card);
-    border: 1px solid var(--cor-borda);
+    background-color: var(--cinza-escuro);
+    border: 1px solid var(--borda);
     border-radius: 16px;
     padding: 36px 28px;
     transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .card-info:hover {
-    border-color: var(--cor-rosa);
+    border-color: var(--rosa);
     transform: translateY(-4px);
 }
 
 .card-info h2 {
-    font-family: var(--fonte-titulo);
-    font-size: 1.3rem;
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 14px;
-    color: var(--cor-rosa);
+    color: var(--rosa);
 }
 
 .card-info p {
-    color: var(--cor-texto-secundario);
-    font-size: 0.95rem;
+    color: var(--texto-cinza);
+    font-size: 15px;
 }
 
 .card-info ul li {
-    color: var(--cor-texto-secundario);
-    font-size: 0.95rem;
-    padding: 4px 0;
+    color: var(--texto-cinza);
+    font-size: 15px;
+    padding: 4px 0 4px 18px;
     position: relative;
-    padding-left: 18px;
 }
 
+/* bolinha colorida antes de cada item da lista, no lugar do "•" padrão */
 .card-info ul li::before {
     content: "";
     position: absolute;
@@ -599,23 +426,18 @@ main {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: var(--gradiente-cta);
+    background: var(--gradiente);
 }
-
-/* ==========================================================================
-   Nossa Equipe
-   ========================================================================== */
 
 .equipe {
     padding: 60px 0 100px;
-    border-top: 1px solid var(--cor-borda);
+    border-top: 1px solid var(--borda);
+    text-align: center;
 }
 
 .equipe h2 {
-    font-family: var(--fonte-titulo);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
-    text-align: center;
     margin-bottom: 44px;
 }
 
@@ -626,8 +448,8 @@ main {
 }
 
 .cards-equipe .card {
-    background-color: var(--cor-card);
-    border: 1px solid var(--cor-borda);
+    background-color: var(--cinza-escuro);
+    border: 1px solid var(--borda);
     border-radius: 16px;
     padding: 28px 20px;
     text-align: center;
@@ -635,7 +457,7 @@ main {
 }
 
 .cards-equipe .card:hover {
-    border-color: var(--cor-rosa);
+    border-color: var(--rosa);
     transform: translateY(-4px);
 }
 
@@ -645,99 +467,47 @@ main {
     object-fit: cover;
     border-radius: 50%;
     margin: 0 auto 18px;
-    border: 2px solid var(--cor-rosa);
+    border: 2px solid var(--rosa);
 }
 
 .cards-equipe .card h3 {
-    font-family: var(--fonte-titulo);
-    font-size: 1.05rem;
+    font-size: 17px;
     font-weight: 700;
     margin-bottom: 4px;
 }
 
 .cards-equipe .card .cargo {
-    color: var(--cor-rosa);
-    font-size: 0.85rem;
+    color: var(--rosa);
+    font-size: 14px;
     font-weight: 600;
     margin-bottom: 12px;
 }
 
 .cards-equipe .card p:not(.cargo) {
-    color: var(--cor-texto-secundario);
-    font-size: 0.9rem;
+    color: var(--texto-cinza);
+    font-size: 14px;
     margin-bottom: 16px;
 }
 
 .cards-equipe .card a {
     display: inline-block;
-    font-size: 0.85rem;
+    font-size: 14px;
     font-weight: 600;
-    color: var(--cor-texto);
-    border: 1px solid var(--cor-borda);
+    color: #ffffff;
+    border: 1px solid var(--borda);
     border-radius: 8px;
     padding: 8px 18px;
     transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .cards-equipe .card a:hover {
-    background: var(--gradiente-cta);
+    background: var(--gradiente);
     border-color: transparent;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-
-footer {
-    text-align: center;
-    padding: 28px 0;
-    border-top: 1px solid var(--cor-borda);
-    color: var(--cor-texto-secundario);
-    font-size: 0.85rem;
-}
 
 /* ==========================================================================
-   Responsivo
-   ========================================================================== */
-
-@media (max-width: 1024px) {
-    .cards-equipe {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 16px;
-        padding: 20px 24px;
-    }
-
-    header nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px 24px;
-    }
-
-    main {
-        padding: 0 24px;
-    }
-
-    .banner-quem-somos h1 {
-        font-size: 2.2rem;
-    }
-
-    .missao-visao-valores {
-        grid-template-columns: 1fr;
-    }
-
-    .cards-equipe {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ==========================================================================
-   Banner — Contato
+   8. PÁGINA CONTATO (contato.html)
    ========================================================================== */
 
 .banner-contato {
@@ -748,21 +518,16 @@ footer {
 }
 
 .banner-contato h1 {
-    font-family: var(--fonte-titulo);
-    font-size: 3rem;
+    font-size: 48px;
     font-weight: 800;
     line-height: 1.15;
     margin-bottom: 24px;
 }
 
 .banner-contato .descricao {
-    font-size: 1.05rem;
-    color: var(--cor-texto-secundario);
+    font-size: 17px;
+    color: var(--texto-cinza);
 }
-
-/* ==========================================================================
-   Contato — informações + formulário
-   ========================================================================== */
 
 .contato {
     display: grid;
@@ -774,29 +539,28 @@ footer {
 
 .informacoes,
 .formulario {
-    background-color: var(--cor-card);
-    border: 1px solid var(--cor-borda);
+    background-color: var(--cinza-escuro);
+    border: 1px solid var(--borda);
     border-radius: 16px;
     padding: 36px 32px;
 }
 
 .informacoes h2,
 .formulario h2 {
-    font-family: var(--fonte-titulo);
-    font-size: 1.4rem;
+    font-size: 22px;
     font-weight: 700;
     margin-bottom: 24px;
 }
 
 .informacoes p {
-    color: var(--cor-texto-secundario);
-    font-size: 0.95rem;
+    color: var(--texto-cinza);
+    font-size: 15px;
     margin-bottom: 22px;
 }
 
 .informacoes p strong {
     display: inline-block;
-    color: var(--cor-texto);
+    color: #ffffff;
     font-weight: 600;
     margin-bottom: 4px;
 }
@@ -810,25 +574,25 @@ footer {
 .formulario input,
 .formulario textarea {
     width: 100%;
-    background-color: var(--cor-bg);
-    border: 1px solid var(--cor-borda);
+    background-color: var(--preto);
+    border: 1px solid var(--borda);
     border-radius: 8px;
     padding: 14px 16px;
-    color: var(--cor-texto);
-    font-family: var(--fonte-texto);
-    font-size: 0.95rem;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
     transition: border-color 0.2s ease;
 }
 
 .formulario input::placeholder,
 .formulario textarea::placeholder {
-    color: var(--cor-texto-secundario);
+    color: var(--texto-cinza);
 }
 
 .formulario input:focus,
 .formulario textarea:focus {
     outline: none;
-    border-color: var(--cor-rosa);
+    border-color: var(--rosa);
 }
 
 .formulario textarea {
@@ -837,12 +601,10 @@ footer {
 
 .formulario button {
     align-self: flex-start;
-    background: var(--gradiente-cta);
-    border: none;
-    color: var(--cor-texto);
-    font-family: var(--fonte-texto);
+    background: var(--gradiente);
+    color: #ffffff;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 15px;
     padding: 14px 28px;
     border-radius: 8px;
     cursor: pointer;
@@ -854,25 +616,20 @@ footer {
     transform: translateY(-1px);
 }
 
-/* ==========================================================================
-   Redes sociais
-   ========================================================================== */
-
 .redes {
     text-align: center;
     padding: 60px 0 100px;
-    border-top: 1px solid var(--cor-borda);
+    border-top: 1px solid var(--borda);
 }
 
 .redes h2 {
-    font-family: var(--fonte-titulo);
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 14px;
 }
 
 .redes p {
-    color: var(--cor-texto-secundario);
+    color: var(--texto-cinza);
     margin-bottom: 32px;
 }
 
@@ -886,44 +643,102 @@ footer {
 .links-redes a {
     display: inline-block;
     padding: 12px 26px;
-    border: 1px solid var(--cor-borda);
+    border: 1px solid var(--borda);
     border-radius: 8px;
     font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--cor-texto);
+    font-size: 14px;
+    color: #ffffff;
     transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .links-redes a:hover {
-    background: var(--gradiente-cta);
+    background: var(--gradiente);
     border-color: transparent;
     transform: translateY(-2px);
 }
 
+
 /* ==========================================================================
-   Responsivo — Contato
+   9. RESPONSIVO
+   Duas larguras cobrem as 3 páginas: 1024px (tablet) e 768px (celular).
    ========================================================================== */
 
+@media (max-width: 1024px) {
+
+    /* Página Inicial */
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Quem Somos */
+    .cards-equipe {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
 @media (max-width: 768px) {
+
+    /* compartilhado por todas as páginas */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        padding: 0 24px;
+    }
+
+    /* Página Inicial */
+    main:has(.hero-texto) {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 50px 24px;
+    }
+
+    .hero-botoes {
+        justify-content: center;
+    }
+
+    .cartao-1,
+    .cartao-2 {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Quem Somos */
+    .banner-quem-somos h1 {
+        font-size: 32px;
+    }
+
+    .missao-visao-valores {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-equipe {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contato */
     .contato {
         grid-template-columns: 1fr;
     }
 
     .banner-contato h1 {
-        font-size: 2.2rem;
+        font-size: 32px;
     }
 
     .formulario button {
         align-self: stretch;
     }
-}
 
-/* ==========================================================================
-   Correção: o CSS da home define "main { display: flex; ... }" lá em cima,
-   o que faz as seções das páginas internas (Quem Somos, Contato) tentarem
-   ficar lado a lado. Esse bloco sobrescreve só o display, sem mexer no resto.
-   ========================================================================== */
-
-main {
-    display: block;
 }

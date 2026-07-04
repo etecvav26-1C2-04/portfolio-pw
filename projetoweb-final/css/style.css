@@ -193,7 +193,7 @@ main {
 }
 
 .hero-imagem img {
-    width: 340px;
+    width: 400px;
     border-radius: 20px;
     display: block;
 }
@@ -250,25 +250,13 @@ main {
     margin-bottom: 30px;
 }
 
-.marcas-lista {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;      /* se não couber tudo numa linha, quebra pra próxima */
-    gap: 40px;
-}
-
-.marcas-lista img {
-    height: 40px;
-    width: auto;
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: opacity 0.2s ease, filter 0.2s ease;
-}
-
-.marcas-lista img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
+/* frase de destaque que fica sozinha na caixinha */
+.slogan {
+    font-size: 24px;
+    font-weight: 600;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #ffffff;
 }
 
 

@@ -345,6 +345,13 @@ main:has(.hero-texto) {
 .cards-equipe .card {
     padding: 28px 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-equipe .card button {
+    margin-top: auto;     /* Empurra o botão para o final */
+    align-self: center;   /* Centraliza o botão */
 }
 
 .cards-equipe .card:hover {
@@ -381,6 +388,8 @@ main:has(.hero-texto) {
 
 .cards-equipe .card a {
     display: inline-block;
+    margin-top: auto;      
+    align-self: center;    
     font-size: 14px;
     font-weight: 600;
     color: #ffffff;

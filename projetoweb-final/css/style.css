@@ -350,8 +350,8 @@ main:has(.hero-texto) {
 }
 
 .cards-equipe .card button {
-    margin-top: auto;     /* Empurra o botão para o final */
-    align-self: center;   /* Centraliza o botão */
+    margin-top: auto;    
+    align-self: center; 
 }
 
 .cards-equipe .card:hover {

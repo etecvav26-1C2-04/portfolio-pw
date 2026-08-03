@@ -1,0 +1,88 @@
+/* CONFIGURAÇÕES GERAIS */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f8ff;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(to right, #6fb1fc, #4364f7);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin: 10px 0;
+}
+
+header p {
+    font-size: 18px;
+}
+
+/* MENU */
+nav {
+    text-align: center;
+    padding: 15px;
+    background-color: white;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: #4364f7;
+}
+
+/* SOBRE */
+#sobre {
+    padding: 30px;
+    text-align: center;
+}
+
+#sobre p {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* DESTINOS */
+#destinos {
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+}
+
+#destinos ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* BOTÃO */
+#destinos + section {
+    text-align: center;
+    padding: 40px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #ff7a18;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* CONTATO */
+#contato {
+    padding: 30px;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    background-color: #4364f7;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}

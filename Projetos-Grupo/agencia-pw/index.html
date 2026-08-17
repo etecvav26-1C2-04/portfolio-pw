@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Turismo | Viva Jundiaí</title>
+
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
+</head>
+
+<body>
+
+    <header>
+
+        <a href="index.html" class="logo">
+            <img src="img/viva.png" alt="Viva Jundiaí" height="150" width="250">
+        </a>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="rotas.html">Rotas</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="curiosidades.html">Curiosidades</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-imagem">
+                <img src="img/banner2.png" alt="Paisagem de Jundiaí">
+            </div>
+
+            <div class="hero-conteudo">
+
+                <h1>JUNDIAÍ, A TERRA DA UVA</h1>
+
+                <p>
+                    Explore e conheça essa cidade em uma visão diferente.
+                </p>
+
+                <a href="#rotas" class="botao">
+                    Conheça as Rotas
+                    <span class="mdi mdi-arrow-right"></span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section id="curiosidades" class="descubra">
+ 
+            <div class="descubra-grid">
+ 
+                <div class="descubra-imagem">
+                    <img src="img/vista1.jpg" alt="Paisagem de Jundiaí">
+                </div>
+ 
+                <div class="descubra-texto">
+ 
+                    <h2>DESCUBRA JUNDIAÍ</h2>
+ 
+                    <p>
+                        Conheça a história, a natureza e as experiências que fazem Jundiaí ser uma cidade diferente.
+                    </p>
+ 
+                    <a href="#" class="descubra-card">
+ 
+                        <span class="mdi mdi-lightbulb-on-outline"></span>
+ 
+                        <div class="descubra-card-texto">
+                            <h3>Curiosidades</h3>
+                            <p>
+                                Descubra fatos e curiosidades sobre a história e a cultura de Jundiaí.
+                            </p>
+                        </div>
+ 
+                        <span class="mdi mdi-arrow-right descubra-card-seta"></span>
+ 
+                    </a>
+ 
+                </div>
+ 
+            </div>
+ 
+        </section>
+
+
+        <section id="servicos" class="servicos">
+
+            <h2>SERVIÇOS</h2>
+
+            <p>
+                Conheça alguns serviços e experiências que Jundiaí proporciona para aproveitar a cidade.
+            </p>
+
+            <div class="cards-servicos">
+
+                <div class="servico-card">
+                    <span class="mdi mdi-fruit-grapes-outline"></span>
+                    <h3>Vinícolas</h3>
+                </div>
+
+                <div class="servico-card">
+                    <span class="mdi mdi-human-male-female-child"></span>
+                    <h3>Lazer</h3>
+                </div>
+
+                <div class="servico-card">
+                    <span class="mdi mdi-forest"></span>
+                    <h3>Turismo Rural</h3>
+                </div>
+
+                <div class="servico-card">
+                    <span class="mdi mdi-bank"></span>
+                    <h3>História e Cultura</h3>
+                </div>
+
+                <div class="servico-card">
+                    <span class="mdi mdi-silverware-fork-knife"></span>
+                    <h3>Gastronomia</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="rotas" class="rotas">
+
+            <section id="inicio" class="aba ativa">
+
+                <div class="titulo">
+                    <h2>CONHEÇA ALGUMAS ROTAS TURÍSTICAS</h2>
+
+                    <p>
+                        Escolha uma rota e descubra diferentes experiências que Jundiaí oferece.
+                    </p>
+                </div>
+
+                <div class="cards">
+
+                    <div class="card" onclick="abrirAba('brincar')">
+                        <img src="img/brincar.jpg" alt="Rota Brincar">
+                        <div class="card-conteudo">
+                            <h3>Brincar</h3>
+                            <p>Lugares para diversão e lazer.</p>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="abrirAba('historico')">
+                        <img src="img/historico.jpg" alt="Rota Centro Histórico">
+                        <div class="card-conteudo">
+                            <h3>Centro Histórico</h3>
+                            <p>Conheça a história e arquitetura de Jundiaí.</p>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="abrirAba('sabores')">
+                        <img src="img/sabores.avif" alt="Rota Dos Sabores">
+                        <div class="card-conteudo">
+                            <h3>Dos Sabores</h3>
+                            <p>Descubra a gastronomia da cidade.</p>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="abrirAba('uva')">
+                        <img src="img/uva.jpg" alt="Rota Uva e Vinho">
+                        <div class="card-conteudo">
+                            <h3>Uva e Vinho</h3>
+                            <p>Conheça a tradição da produção de uvas e vinhos.</p>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="abrirAba('cultura')">
+                        <img src="img/cultura.jpg" alt="Rota Cultura Italiana">
+                        <div class="card-conteudo">
+                            <h3>Cultura Italiana</h3>
+                            <p>Descubra a influência italiana presente na cidade.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <section id="galeria" class="galeria">
+
+            <h2>GALERIA</h2>
+
+            <p>
+                Um pouco das paisagens e experiências de Jundiaí.
+            </p>
+
+            <a href="galeria.html" class="botao">
+                Veja mais
+                <span class="mdi mdi-arrow-right"></span>
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-conteudo">
+
+            <div class="footer-logo">
+                <img src="img/viva.png" alt="Viva Jundiaí">
+            </div>
+
+            <div class="footer-links">
+                <a href="sobre.html">Sobre Jundiaí - SP</a>
+                <a href="#servicos">Serviços</a>
+                <a href="rotas.html">Rotas</a>
+            </div>
+
+        </div>
+
+        <p class="copyright">
+            &copy; 2026 Viva Jundiaí
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

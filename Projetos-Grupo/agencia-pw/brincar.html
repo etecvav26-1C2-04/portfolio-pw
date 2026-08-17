@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rota Brincar | Viva Jundiaí</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
+</head>
+
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <h1>Turismo Jundiaí</h1>
+
+        <nav>
+
+            <a onclick="abrirAba('inicio')">
+                Início
+            </a>
+
+            <a onclick="abrirAba('brincar')">
+                Brincar
+            </a>
+
+            <a onclick="abrirAba('historico')">
+                Centro Histórico
+            </a>
+
+            <a onclick="abrirAba('sabores')">
+                Dos Sabores
+            </a>
+
+            <a onclick="abrirAba('uva')">
+                Uva e Vinho
+            </a>
+
+            <a onclick="abrirAba('cultura')">
+                Cultura Italiana
+            </a>
+
+            <a onclick="abrirAba('sobre')">
+                Sobre
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- BANNER -->
+
+    <section class="banner">
+
+        <div>
+
+            <h2>Descubra Jundiaí</h2>
+
+            <p>
+                Conheça os lugares, sabores e histórias da cidade.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <main>
+
+
+        <!-- INÍCIO -->
+
+        <section id="inicio" class="aba ativa">
+
+            <div class="titulo">
+
+                <h2>Conheça Jundiaí</h2>
+
+                <p>
+                    Descubra diferentes formas de conhecer e aproveitar a cidade.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <div class="card" onclick="abrirAba('brincar')">
+
+                    <img src="imagens/brincar.png">
+
+                    <div class="card-conteudo">
+
+                        <h3>Brincar</h3>
+
+                        <p>
+                            Lugares para diversão e lazer.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card" onclick="abrirAba('historico')">
+
+                    <img src="imagens/historico.png">
+
+                    <div class="card-conteudo">
+
+                        <h3>Centro Histórico</h3>
+
+                        <p>
+                            Conheça a história e arquitetura de Jundiaí.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card" onclick="abrirAba('sabores')">
+
+                    <img src="imagens/sabores.png">
+
+                    <div class="card-conteudo">
+
+                        <h3>Dos Sabores</h3>
+
+                        <p>
+                            Descubra a gastronomia da cidade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card" onclick="abrirAba('uva')">
+
+                    <img src="imagens/uva.png">
+
+                    <div class="card-conteudo">
+
+                        <h3>Uva e Vinho</h3>
+
+                        <p>
+                            Conheça a tradição da produção de uvas e vinhos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card" onclick="abrirAba('cultura')">
+
+                    <img src="imagens/cultura.png">
+
+                    <div class="card-conteudo">
+
+                        <h3>Cultura Italiana</h3>
+
+                        <p>
+                            Descubra a influência italiana presente na cidade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- BRINCAR -->
+
+        <section id="brincar" class="aba">
+
+            <div class="titulo">
+
+                <h2>Brincar</h2>
+
+                <p>
+                    Lugares para aproveitar Jundiaí.
+                </p>
+
+            </div>
+
+            <div class="texto">
+
+                <p>
+                    Jundiaí possui diferentes espaços para lazer, diversão e atividades ao ar livre.
+                </p>
+
+                <br>
+
+                <p>
+                    Aqui você pode apresentar parques, espaços culturais, atrações e outros lugares para visitar com amigos e família.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CENTRO HISTÓRICO -->
+
+        <section id="historico" class="aba">
+
+            <div class="titulo">
+
+                <h2>Centro Histórico</h2>
+
+                <p>
+                    História e arquitetura de Jundiaí.
+                </p>
+
+            </div>
+
+            <div class="texto">
+
+                <p>
+                    O centro histórico reúne construções e locais importantes para conhecer a história da cidade.
+                </p>
+
+                <br>
+
+                <p>
+                    É uma ótima opção para quem deseja conhecer mais sobre o passado de Jundiaí.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SABORES -->
+
+        <section id="sabores" class="aba">
+
+            <div class="titulo">
+
+                <h2>Dos Sabores</h2>
+
+                <p>
+                    Gastronomia e sabores de Jundiaí.
+                </p>
+
+            </div>
+
+            <div class="texto">
+
+                <p>
+                    A gastronomia é uma parte importante da experiência turística de Jundiaí.
+                </p>
+
+                <br>
+
+                <p>
+                    Nesta seção podem ser apresentados restaurantes, comidas típicas, produtos locais e lugares gastronômicos.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- UVA E VINHO -->
+
+        <section id="uva" class="aba">
+
+            <div class="titulo">
+
+                <h2>Uva e Vinho</h2>
+
+                <p>
+                    Uma das tradições de Jundiaí.
+                </p>
+
+            </div>
+
+            <div class="texto">
+
+                <p>
+                    Jundiaí possui uma forte tradição relacionada ao cultivo de uvas e à produção de vinhos.
+                </p>
+
+                <br>
+
+                <p>
+                    A Rota da Uva reúne propriedades e atrações ligadas à produção rural e à cultura local.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CULTURA ITALIANA -->
+
+        <section id="cultura" class="aba">
+
+            <div class="titulo">
+
+                <h2>Cultura Italiana</h2>
+
+                <p>
+                    A influência italiana em Jundiaí.
+                </p>
+
+            </div>
+
+            <div class="texto">
+
+                <p>
+                    A imigração italiana teve grande influência na formação cultural de Jundiaí.
+                </p>
+
+                <br>
+
+                <p>
+                    Essa influência pode ser percebida na gastronomia, nas festas, nas tradições e na produção agrícola da cidade.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE -->
+
+        <section id="sobre" class="aba">
+
+            <div class="titulo">
+
+                <h2>Sobre o Projeto</h2>
+
+            </div>
+
+            <div class="texto">
+
+                <p>
+                    Este site foi desenvolvido como projeto escolar na disciplina de Desenvolvimento de Web-Site.
+                </p>
+
+                <br>
+
+                <p>
+                    O objetivo é apresentar informações turísticas sobre Jundiaí de maneira simples, organizada e acessível.
+                </p>
+
+                <br>
+
+                <p>
+                    Foram utilizados HTML, CSS e JavaScript no desenvolvimento.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+
+        <div class=" footer-conteudo ">
+
+            <div class="footer-logo ">
+
+                <img src="assets/logo/viva.png " alt="Viva Jundiaí ">
+
+            </div>
+
+
+            <div class="footer-links ">
+
+                <a href="sobre.html ">
+                    Sobre Jundiaí - SP
+                </a>
+
+                <a href="#servicos ">
+                    Serviços
+                </a>
+
+                <a href="#rotas ">
+                    Rotas
+                </a>
+
+            </div>
+
+        </div>
+
+        <p class="copyright ">
+            &copy; 2026 Viva Jundiaí
+        </p>
+
+    </footer>
+
+
+
+</body>
+
+</html>

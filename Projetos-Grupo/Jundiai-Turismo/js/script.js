@@ -23,5 +23,5 @@ function culturaItaliana() {
 }
 
 
-var meubotao = document.querySelector('#cursor');
-meubotao.style.cursor = 'pointer';
+var botao = document.querySelector('#cursor');
+botao.style.cursor = 'pointer';

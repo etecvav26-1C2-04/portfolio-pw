@@ -1,6 +1,5 @@
 function Descubra() {
     location.href = "curiosidades.html";
-
 }
 
 function brincar() {

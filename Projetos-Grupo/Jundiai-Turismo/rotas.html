@@ -16,8 +16,8 @@
 </head>
 
 
-
 <body>
+
     <header>
         <a href="index.html" class="logo">
             <img src="img/viva.png" alt="Viva Jundiaí">
@@ -32,6 +32,8 @@
             <a href="curiosidades.html">Curiosidades</a>
         </nav>
     </header>
+
+
     <main>
 
         <section id="rotas" class="rotas">
@@ -45,89 +47,84 @@
 
                         <h1>ROTAS TURÍSTICAS</h1>
 
-                        <p>
-                            Descubra diferentes maneiras de conhecer, explorar e viver Jundiaí.
-                        </p>
+                        <p>Descubra diferentes maneiras de conhecer, explorar e viver Jundiaí. </p>
 
                     </div>
 
             </section>
 
-            <h2>CONHEÇA JUNDIAÍ</h2>
+            <section>
+                <h2>CONHEÇA JUNDIAÍ</h2>
 
-            <p>
-                Jundiaí possui diferentes atrações que permitem conhecer a cidade por meio de sua história, cultura, gastronomia, natureza e tradições.
-            </p>
+                <p>Jundiaí possui diferentes atrações que permitem conhecer a cidade por meio de sua história, cultura, gastronomia, natureza e tradições. </p>
 
-            <p>
-                Para facilitar essa experiência, o turismo da cidade reúne diferentes roteiros que apresentam lugares e atividades para todos os gostos.
-            </p>
+                <p>Para facilitar essa experiência, o turismo da cidade reúne diferentes roteiros que apresentam lugares e atividades para todos os gostos. </p>
+            </section>
+
+            <section class="rotas-hero">
+
+                <div class="cards">
+
+                    <div class="card" onclick="brincar()">
+                        <img src="img/brincar.jpg" alt="Rota Brincar">
+                        <div class="card-conteudo">
+                            <h3>Brincar</h3>
+                            <p>Lugares para diversão e lazer.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="card" onclick="centrohistorico()">
+                        <img src="img/historico.jpg" alt="Rota Centro Histórico">
+                        <div class="card-conteudo">
+                            <h3>Centro Histórico</h3>
+                            <p>Conheça a história e arquitetura de Jundiaí.</p>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="sabores()">
+                        <img src="img/sabores.avif" alt="Rota Dos Sabores">
+                        <div class="card-conteudo">
+                            <h3>Dos Sabores</h3>
+                            <p>Descubra a gastronomia da cidade.</p>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="uvaVinho()">
+                        <img src="img/uva.jpg" alt="Rota Uva e Vinho">
+                        <div class="card-conteudo">
+                            <h3>Uva e Vinho</h3>
+                            <p>Conheça a tradição da produção de uvas e vinhos.</p>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="culturaItaliana()">
+                        <img src="img/cultura.jpg" alt="Rota Cultura Italiana">
+                        <div class="card-conteudo">
+                            <h3>Cultura Italiana</h3>
+                            <p>Descubra a influência italiana presente na cidade.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="rotas-final">
+
+                <div>
+                    <span class="mdi mdi-compass-outline"></span>
+
+                    <h2>QUAL SERÁ SUA PRÓXIMA EXPERIÊNCIA?</h2>
+
+                    <p>Escolha uma rota, explore novos lugares e descubra um pouco mais de Jundiaí.</p>
+
+                </div>
+
+            </section>
 
         </section>
 
-        <section class="rotas-hero">
-
-            <div class="cards">
-
-                <div class="card" onclick="brincar()">
-                    <img src="img/brincar.jpg" alt="Rota Brincar">
-                    <div class="card-conteudo">
-                        <h3>Brincar</h3>
-                        <p>Lugares para diversão e lazer.</p>
-                    </div>
-
-                </div>
-
-                <div class="card" onclick="centrohistorico()">
-                    <img src="img/historico.jpg" alt="Rota Centro Histórico">
-                    <div class="card-conteudo">
-                        <h3>Centro Histórico</h3>
-                        <p>Conheça a história e arquitetura de Jundiaí.</p>
-                    </div>
-                </div>
-
-                <div class="card" onclick="sabores()">
-                    <img src="img/sabores.avif" alt="Rota Dos Sabores">
-                    <div class="card-conteudo">
-                        <h3>Dos Sabores</h3>
-                        <p>Descubra a gastronomia da cidade.</p>
-                    </div>
-                </div>
-
-                <div class="card" onclick="uvaVinho()">
-                    <img src="img/uva.jpg" alt="Rota Uva e Vinho">
-                    <div class="card-conteudo">
-                        <h3>Uva e Vinho</h3>
-                        <p>Conheça a tradição da produção de uvas e vinhos.</p>
-                    </div>
-                </div>
-
-                <div class="card" onclick="culturaItaliana()">
-                    <img src="img/cultura.jpg" alt="Rota Cultura Italiana">
-                    <div class="card-conteudo">
-                        <h3>Cultura Italiana</h3>
-                        <p>Descubra a influência italiana presente na cidade.</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        </section>
-
-        <section class="rotas-final">
-
-            <div>
-                <span class="mdi mdi-compass-outline"></span>
-
-                <h2>QUAL SERÁ SUA PRÓXIMA EXPERIÊNCIA?</h2>
-
-                <p>
-                    Escolha uma rota, explore novos lugares e descubra um pouco mais de Jundiaí.
-                </p>
-            </div>
-        </section>
     </main>
 
     <footer>
@@ -154,6 +151,17 @@
                 <a href="curiosidades.html">Curiosidades</a>
 
             </div>
+
+            <div class="footer-rotas">
+                <h3>Conheça as Rotas Turísticas de Jundiaí</h3>
+
+                <a href="brincar.html">Rota do Brincar</a>
+                <a href="centrohistorico.html">Rota do Centro Histórico</a>
+                <a href="sabores.html">Rota dos Sabores</a>
+                <a href="">Rota da Uva e Vinho</a>
+                <a href="">Rota da Cultura Italiana</a>
+            </div>
+
 
             <div class="footer-informacoes">
                 <h3>Centro de Informações Turísticas</h3>

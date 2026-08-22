@@ -395,12 +395,141 @@ header nav a:hover::after {
 }
 
 /* =========================================
+   SOBRE
+========================================= */
+.sobre {
+    color: #fff;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.sobre-imagem {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 335px;
+    object-fit: cover;
+    filter: brightness(0.55);
+}
+
+.capa-sobre {
+    
+
+}
+
+.capa-texto {
+    
+}
+
+.sobre-projeto {
+  
+ 
+}
+
+.sobre-texto {
+  margin-top: 125px;
+  color: #4d1e32;
+}
+
+.encontra {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.encontra h2 {
+    color: var(--vinho);
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.cards-sobre {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.sobre-card {
+    background-color: #fff;
+    border: 1px solid #eee0d0;
+    border-radius: 12px;
+    width: 170px;
+    padding: 26px 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+}
+
+.sobre-card:hover {
+    transform: translateY(-4px);
+}
+
+.sobre-card h3 {
+    color: var(--vinho-escuro);
+    font-size: 17px;
+    margin-bottom: 6px;
+}
+
+.sobre-card p {
+    font-size: 14px;
+    color: var(--texto-claro);
+}
+
+.sobre-card .mdi {
+    font-size: 30px;
+    color: var(--verde);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.trabalho {
+    font-size: 18px;
+    color: var(--vinho-escuro);
+    margin-bottom: 6px;
+    margin-top: 30px;
+}
+
+.trabalho-conteudo {
+    
+}
+
+.destaque {
+    margin-top: 20px;
+}
+
+.destaque {
+    font-size: 18px;
+    color: var(--vinho-escuro);
+    margin-bottom: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
    FOOTER
 ========================================= */
 footer {
     background-color: var(--vinho-escuro);
     color: #fff;
-    padding: 40px 20px 20px;
+    padding: 30px 20px 16px;
     text-align: center;
 }
 
@@ -408,24 +537,40 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
-    margin-bottom: 20px;
+    gap: 14px;
+    margin-bottom: 14px;
 }
 
 .footer-logo img {
-    height: 60px;
+    height: 40px;
     filter: brightness(0) invert(1);
+    margin: 0 auto;
+}
+
+.footer-logo p {
+    font-size: 13px;
+    opacity: 0.8;
+    margin-top: 6px;
+}
+
+.footer-links h3,
+.footer-redes h3 {
+    font-size: 14px;
+    font-family: var(--fonte-corpo);
+    font-weight: 600;
+    margin-bottom: 10px;
+    opacity: 0.9;
 }
 
 .footer-links {
     display: flex;
-    gap: 24px;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 16px;
 }
 
 .footer-links a {
-    font-size: 14px;
+    font-size: 13px;
     opacity: 0.85;
     transition: opacity 0.2s ease;
 }
@@ -435,12 +580,50 @@ footer {
     text-decoration: underline;
 }
 
-.copyright {
+.footer-redes {
+    margin-top: 4px;
+}
+
+.footer-redes p {
     font-size: 13px;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.redes-icones {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.redes-icones a .mdi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.redes-icones a:hover .mdi {
+    background-color: var(--dourado);
+    color: var(--vinho-escuro);
+}
+
+.copyright {
+    font-size: 12px;
     opacity: 0.6;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
-    padding-top: 16px;
+    padding-top: 12px;
 }
+
+
+
+
+
 
 /* =========================================
    RESPONSIVO

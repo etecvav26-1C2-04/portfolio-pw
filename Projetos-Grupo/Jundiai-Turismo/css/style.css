@@ -162,7 +162,7 @@ header nav a:hover::after {
 .descubra {
     padding: 90px 40px;
 }
- 
+
 .descubra-grid {
     max-width: 1140px;
     margin: 0 auto;
@@ -171,31 +171,31 @@ header nav a:hover::after {
     gap: 60px;
     align-items: center;
 }
- 
+
 .descubra-imagem {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 16px 34px rgba(111, 44, 71, 0.18);
 }
- 
+
 .descubra-imagem img {
     width: 100%;
     height: 420px;
     object-fit: cover;
 }
- 
+
 .descubra-texto h2 {
     color: var(--vinho);
     font-size: 34px;
     margin-bottom: 18px;
 }
- 
+
 .descubra-texto > p {
     color: var(--texto-claro);
     margin-bottom: 34px;
     max-width: 460px;
 }
- 
+
 .descubra-card {
     display: flex;
     align-items: center;
@@ -207,29 +207,29 @@ header nav a:hover::after {
     max-width: 460px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
- 
+
 .descubra-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(111, 44, 71, 0.14);
 }
- 
+
 .descubra-card > .mdi:first-child {
     font-size: 34px;
     color: var(--verde);
     flex-shrink: 0;
 }
- 
+
 .descubra-card-texto h3 {
     font-size: 19px;
     color: var(--vinho-escuro);
     margin-bottom: 4px;
 }
- 
+
 .descubra-card-texto p {
     font-size: 14px;
     color: var(--texto-claro);
 }
- 
+
 .descubra-card-seta {
     margin-left: auto;
     font-size: 20px;
@@ -237,7 +237,7 @@ header nav a:hover::after {
     flex-shrink: 0;
     transition: transform 0.2s ease;
 }
- 
+
 .descubra-card:hover .descubra-card-seta {
     transform: translateX(4px);
 }
@@ -373,14 +373,48 @@ header nav a:hover::after {
     padding: 70px 20px;
 }
 
-.galeria h2 {
-    font-size: 32px;
+.galeria .titulo {
+    margin-bottom: 40px;
+}
+
+.galeria h1 {
+    font-size: 36px;
     margin-bottom: 14px;
 }
 
-.galeria p {
-    max-width: 500px;
-    margin: 0 auto 26px;
+.galeria .titulo p {
+    max-width: 560px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.galeria-fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.foto {
+    width: calc(25% - 15px);
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.foto img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.foto figcaption {
+    padding: 10px 8px;
+    font-size: 13px;
+    text-align: center;
+    color: #fff;
     opacity: 0.9;
 }
 
@@ -416,28 +450,31 @@ header nav a:hover::after {
     filter: brightness(0.55);
 }
 
-.capa-sobre {
-    
-
-}
-
-.capa-texto {
-    
-}
-
 .sobre-projeto {
-  
- 
+    padding: 20px 20px 70px;
+    text-align: center;
 }
 
 .sobre-texto {
-  margin-top: 125px;
-  color: #4d1e32;
+    max-width: 680px;
+    margin: 40px auto 0;
+}
+
+.sobre-texto h2 {
+    color: var(--vinho);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    color: var(--texto-claro);
+    font-size: 16px;
+    margin-bottom: 16px;
 }
 
 .encontra {
     text-align: center;
-    padding: 70px 20px;
+    padding: 60px 20px;
 }
 
 .encontra h2 {
@@ -487,41 +524,48 @@ header nav a:hover::after {
 }
 
 .trabalho {
-    font-size: 18px;
-    color: var(--vinho-escuro);
-    margin-bottom: 6px;
-    margin-top: 30px;
+    padding: 40px 20px 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .trabalho-conteudo {
-    
+    text-align: center;
+}
+
+.trabalho-conteudo h2 {
+    color: var(--vinho);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.trabalho-conteudo p {
+    color: var(--texto-claro);
+    font-size: 16px;
+    margin-bottom: 14px;
 }
 
 .destaque {
+    background-color: var(--vinho);
+    color: #fff;
+    text-align: center;
+    padding: 40px 30px;
+    border-radius: 16px;
     margin-top: 20px;
 }
 
-.destaque {
-    font-size: 18px;
-    color: var(--vinho-escuro);
-    margin-bottom: 6px;
+.destaque h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.destaque p {
+    opacity: 0.9;
+    font-size: 15px;
+}
 
 /* =========================================
    FOOTER
@@ -620,11 +664,6 @@ footer {
     padding-top: 12px;
 }
 
-
-
-
-
-
 /* =========================================
    RESPONSIVO
 ========================================= */
@@ -653,5 +692,9 @@ footer {
 
     .hero-conteudo h1 {
         font-size: 32px;
+    }
+
+    .foto {
+        width: calc(50% - 10px);
     }
 }

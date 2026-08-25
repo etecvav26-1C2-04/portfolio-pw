@@ -303,6 +303,7 @@ header nav a:hover::after {
     padding: 70px 20px;
 }
 
+
 .rotas .titulo {
     text-align: center;
     margin-bottom: 40px;
@@ -346,6 +347,108 @@ header nav a:hover::after {
     height: 150px;
     object-fit: cover;
     background-color: #eee0d0;
+}
+
+/* =========================================
+   ROTAS - INTRODUÇÃO
+========================================= */
+.rotas-intro {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 40px 0;
+}
+
+.rotas-intro h2 {
+    color: var(--texto);
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+.rotas-intro p {
+    color: var(--texto-claro);
+    margin-bottom: 8px;
+}
+
+/* =========================================
+   ROTAS - CARDS
+========================================= */
+.rotas-hero {
+    padding: 30px 40px 80px;
+}
+
+.rotas-hero .cards {
+    max-width: 1460px;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.rotas-hero .cards .card {
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 288px;
+    min-height: 380px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rotas-hero .cards .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(111, 44, 71, 0.15);
+}
+
+.rotas-hero .cards .card img {
+    width: 100%;
+    height: 188px;
+    object-fit: cover;
+    background-color: #eee0d0;
+}
+
+.rotas-hero .cards .card-conteudo {
+    padding: 20px 18px;
+}
+
+.rotas-hero .cards .card-conteudo h3 {
+    font-size: 20px;
+    color: var(--vinho-escuro);
+    margin-bottom: 8px;
+}
+
+.rotas-hero .cards .card-conteudo p {
+    font-size: 14px;
+    color: var(--texto-claro);
+    line-height: 1.5;
+}
+
+/* =========================================
+   ROTAS - CHAMADA FINAL
+========================================= */
+.rotas-final {
+    text-align: center;
+    padding: 40px 20px 90px;
+}
+
+.rotas-final .mdi {
+    font-size: 34px;
+    color: var(--vinho);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.rotas-final h2 {
+    color: var(--vinho);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.rotas-final p {
+    color: var(--texto-claro);
+    max-width: 560px;
+    margin: 0 auto;
 }
 
 .card-conteudo {
@@ -849,4 +952,694 @@ footer {
 .card-historico .card-conteudo a:hover {
     background-color: #e0b95d;
     transform: translateY(-2px);
+}
+
+/* =========================================
+   CULTURA ITALIANA
+========================================= */
+
+/* HERO / TÍTULO DA PÁGINA */
+.curiosidadesinicio {
+    min-height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(77, 30, 50, 0.88),
+            rgba(111, 44, 71, 0.88)
+        ),
+        url("../img/cultura.jpg") center/cover no-repeat;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* detalhe decorativo */
+.curiosidadesinicio::before {
+    content: "🇮🇹";
+    position: absolute;
+    font-size: 90px;
+    opacity: 0.12;
+    top: 25px;
+    left: 8%;
+}
+
+.curiosidadesinicio::after {
+    content: "🍇";
+    position: absolute;
+    font-size: 80px;
+    opacity: 0.12;
+    bottom: 20px;
+    right: 8%;
+}
+
+.curiosidadesinicio h1 {
+    color: #fff;
+    font-size: 56px;
+    line-height: 1.2;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+========================================= */
+
+.curiosidades {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 75px 40px 90px;
+}
+
+
+/* =========================================
+   CADA SEÇÃO
+========================================= */
+
+.curiosidades section {
+    background-color: #fff;
+    border-radius: 18px;
+    padding: 38px 45px;
+    margin-bottom: 35px;
+
+    box-shadow: 0 6px 22px rgba(111, 44, 71, 0.08);
+
+    border-left: 5px solid var(--dourado);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.curiosidades section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(111, 44, 71, 0.12);
+}
+
+
+/* =========================================
+   TÍTULOS
+========================================= */
+
+.curiosidades h2 {
+    color: var(--vinho);
+    font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+}
+
+.curiosidades h2:first-letter {
+    font-size: 32px;
+}
+
+
+/* =========================================
+   TEXTOS
+========================================= */
+
+.curiosidades p {
+    color: var(--texto-claro);
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+
+/* =========================================
+   IMAGEM DA CULTURA
+========================================= */
+
+.card-uvas {
+    width: 100%;
+    margin: 35px 0;
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 30px rgba(77, 30, 50, 0.16);
+
+    position: relative;
+}
+
+.card-uvas::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 4px solid rgba(201, 160, 77, 0.35);
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.card-uvas img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.card-uvas:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   DESTAQUE PARA A PARTE DA UVA
+========================================= */
+
+.curiosidades section:nth-of-type(2) {
+    border-left-color: var(--verde);
+}
+
+.curiosidades section:nth-of-type(2) h2 {
+    color: var(--verde);
+}
+
+
+/* =========================================
+   GASTRONOMIA
+========================================= */
+
+.curiosidades section:nth-of-type(3) {
+    border-left-color: var(--dourado);
+}
+
+.curiosidades section:nth-of-type(3) h2 {
+    color: var(--vinho);
+}
+
+
+/* =========================================
+   TURISMO E PATRIMÔNIO
+========================================= */
+
+.curiosidades section:nth-of-type(4) {
+    border-left-color: var(--vinho);
+}
+
+.curiosidades section:nth-of-type(4) h2 {
+    color: var(--vinho-escuro);
+}
+
+
+/* =========================================
+   FUNDO DA PÁGINA
+========================================= */
+
+body {
+    background-color: var(--creme);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    margin-top: 0;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 768px) {
+
+    .curiosidadesinicio {
+        min-height: 250px;
+    }
+
+    .curiosidadesinicio h1 {
+        font-size: 40px;
+        padding: 20px;
+    }
+
+    .curiosidades {
+        padding: 50px 20px 60px;
+    }
+
+    .curiosidades section {
+        padding: 28px 25px;
+        margin-bottom: 25px;
+    }
+
+    .curiosidades h2 {
+        font-size: 24px;
+    }
+
+    .curiosidades p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .card-uvas {
+        margin: 25px 0;
+    }
+
+    .card-uvas img {
+        height: 280px;
+    }
+}
+
+/* =========================================
+   UVA E VINHO
+========================================= */
+
+.uva-vinho {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 40px 90px;
+}
+
+/* =========================================
+   BLOCO DA UVA E DO VINHO
+========================================= */
+
+.uva-vinho .bloco-uva {
+    background-color: #fff;
+    border-left: 6px solid var(--vinho);
+    border-radius: 20px;
+    padding: 45px 50px;
+    margin-bottom: 35px;
+
+    box-shadow: 0 8px 25px rgba(111, 44, 71, 0.10);
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.uva-vinho .bloco-uva:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(111, 44, 71, 0.15);
+}
+
+/* =========================================
+   BLOCO DA FESTA DA UVA
+========================================= */
+
+.uva-vinho .bloco-festa {
+    background-color: #fff;
+    border-left: 6px solid var(--dourado);
+    border-radius: 20px;
+    padding: 45px 50px;
+
+    box-shadow: 0 8px 25px rgba(111, 44, 71, 0.10);
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.uva-vinho .bloco-festa:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(111, 44, 71, 0.15);
+}
+
+/* =========================================
+   TÍTULOS
+========================================= */
+
+.uva-vinho h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--vinho);
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.uva-vinho .bloco-festa h2 {
+    color: var(--vinho);
+}
+
+/* =========================================
+   TEXTOS
+========================================= */
+
+.uva-vinho p {
+    color: var(--texto-claro);
+    font-family: var(--fonte-corpo);
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.uva-vinho p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   IMAGEM DA FESTA
+========================================= */
+
+.uva-vinho .card-uvas {
+    width: 100%;
+    margin: 30px 0 35px;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(77, 30, 50, 0.16);
+}
+
+.uva-vinho .card-uvas img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.uva-vinho .card-uvas:hover img {
+    transform: scale(1.03);
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 768px) {
+
+    .uva-vinho {
+        padding: 45px 20px 60px;
+    }
+
+    .uva-vinho .bloco-uva,
+    .uva-vinho .bloco-festa {
+        padding: 30px 25px;
+        border-left-width: 5px;
+    }
+
+    .uva-vinho h2 {
+        font-size: 25px;
+        margin-bottom: 22px;
+    }
+
+    .uva-vinho p {
+        font-size: 15px;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+    .uva-vinho .card-uvas {
+        margin: 25px 0 30px;
+    }
+
+    .uva-vinho .card-uvas img {
+        height: 280px;
+    }
+}
+
+/* =========================================
+   PÁGINA CURIOSIDADES
+   ========================================= */
+
+/* =========================================
+   INÍCIO / HERO
+========================================= */
+
+body:has(.curiosidadesinicio) .curiosidadesinicio {
+    min-height: 300px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 40px 20px;
+
+    background:
+        linear-gradient(
+            rgba(45, 35, 28, 0.55),
+            rgba(45, 35, 28, 0.55)
+        ),
+        url("../img/bannersobre.png") center center / cover no-repeat;
+}
+
+/* =========================================
+   TÍTULO DO INÍCIO
+========================================= */
+
+body:has(.curiosidadesinicio) .curiosidadesinicio h1 {
+    color: #fff;
+
+    font-family: var(--fonte-titulo);
+    font-size: 40px;
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    margin: 0 0 12px;
+
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.45);
+
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================
+   TEXTO DO INÍCIO
+========================================= */
+
+body:has(.curiosidadesinicio) .curiosidadesinicio p {
+    color: #fff;
+
+    font-family: var(--fonte-corpo);
+    font-size: 18px;
+    font-weight: 400;
+
+    max-width: 700px;
+
+    line-height: 1.5;
+
+    margin: 0;
+
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================
+   CONTEÚDO DAS CURIOSIDADES
+========================================= */
+
+body:has(.curiosidadesinicio) .curiosidades {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 65px 40px 80px;
+
+    background-color: transparent;
+}
+
+
+/* =========================================
+   TÍTULO "CURIOSIDADES"
+========================================= */
+
+body:has(.curiosidadesinicio) .curiosidades > h2 {
+    color: var(--vinho);
+
+    font-family: var(--fonte-titulo);
+    font-size: 36px;
+    font-weight: 400;
+
+    text-align: center;
+
+    margin: 0 0 45px;
+}
+
+
+/* =========================================
+   CADA CURIOSIDADE
+========================================= */
+
+body:has(.curiosidadesinicio) .curiosidades article {
+    background-color: #fff;
+
+    border-radius: 18px;
+
+    padding: 35px 40px;
+
+    margin-bottom: 35px;
+
+    border-left: 5px solid var(--dourado);
+
+    box-shadow:
+        0 6px 20px rgba(111, 44, 71, 0.09);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+body:has(.curiosidadesinicio) .curiosidades article:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 28px rgba(111, 44, 71, 0.14);
+}
+
+
+/* =========================================
+   TÍTULO DE CADA CURIOSIDADE
+========================================= */
+
+body:has(.curiosidadesinicio) .curiosidades article h3 {
+    color: var(--vinho-escuro);
+
+    font-family: var(--fonte-titulo);
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0 0 18px;
+    line-height: 1.3;
+}
+
+
+/* =========================================
+   TEXTO DE CADA CURIOSIDADE
+========================================= */
+
+body:has(.curiosidadesinicio) .curiosidades article p {
+    color: var(--texto-claro);
+    font-family: var(--fonte-corpo);
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: justify;
+    margin: 0;
+}
+
+
+/* =========================================
+   IMAGENS DOS CARDS
+========================================= */
+
+body:has(.curiosidadesinicio) .curiosidades article .card-uvas {
+    width: 100%;
+    margin: 0 0 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow:
+        0 8px 20px rgba(77, 30, 50, 0.13);
+}
+
+body:has(.curiosidadesinicio) .curiosidades article .card-uvas img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+body:has(.curiosidadesinicio) .curiosidades article:hover .card-uvas img {
+    transform: scale(1.02);
+}
+
+
+/* =========================================
+   CORES DIFERENTES NOS CARDS
+========================================= */
+
+/* Terra da Uva */
+body:has(.curiosidadesinicio)
+.curiosidades article:nth-of-type(1) {
+    border-left-color: var(--vinho);
+}
+
+/* História ferroviária */
+body:has(.curiosidadesinicio)
+.curiosidades article:nth-of-type(2) {
+    border-left-color: var(--dourado);
+}
+
+/* Serra do Japi */
+body:has(.curiosidadesinicio)
+.curiosidades article:nth-of-type(3) {
+    border-left-color: var(--verde);
+}
+
+/* Tradição do vinho */
+body:has(.curiosidadesinicio)
+.curiosidades article:nth-of-type(4) {
+    border-left-color: var(--vinho);
+}
+
+
+/* =========================================
+   FUNDO DA PÁGINA
+========================================= */
+
+body:has(.curiosidadesinicio) {
+    background-color: var(--creme);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+body:has(.curiosidadesinicio) footer {
+    margin-top: 0;
+}
+
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media (max-width: 768px) {
+
+    body:has(.curiosidadesinicio) .curiosidadesinicio {
+        height: 260px;
+        min-height: 260px;
+
+        padding: 30px 20px;
+    }
+
+    body:has(.curiosidadesinicio) .curiosidadesinicio h1 {
+        font-size: 32px;
+    }
+
+    body:has(.curiosidadesinicio) .curiosidadesinicio p {
+        font-size: 15px;
+    }
+
+    body:has(.curiosidadesinicio) .curiosidades {
+        padding: 45px 20px 60px;
+    }
+
+    body:has(.curiosidadesinicio) .curiosidades > h2 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    body:has(.curiosidadesinicio) .curiosidades article {
+        padding: 25px 22px;
+        margin-bottom: 25px;
+    }
+
+    body:has(.curiosidadesinicio) .curiosidades article h3 {
+        font-size: 22px;
+    }
+
+    body:has(.curiosidadesinicio) .curiosidades article p {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    body:has(.curiosidadesinicio)
+    .curiosidades article .card-uvas img {
+        height: 230px;
+    }
 }

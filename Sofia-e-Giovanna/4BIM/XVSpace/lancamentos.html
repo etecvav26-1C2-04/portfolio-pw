@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XVSpace | Lançamentos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+</head>
+
+<body>
+    <aside class="sidebar" id="sidebar">
+        <a class="logo" href="index.html">XV<span>Space</span></a>
+
+        <p class="menu-titulo">NAVEGAR</p>
+        <nav class="menu-links">
+            <a class="menu-link ativo" href="index.html"><span class="mdi mdi-home"></span> Início</a>
+            <a class="menu-link" href="lancamentos.html"><span class="mdi mdi-calendar"></span> Calendário de lançamentos</a>
+            <a class="menu-link" href="trailers.html"><span class="mdi mdi-play-circle"></span> Trailers</a>
+        </nav>
+
+        <div class="sidebar-rodape"><a class="menu-link" href="login.html"><span class="mdi mdi-account-circle"></span> Faça Login</a></div>
+    </aside>
+
+    <div class="conteudo-principal">
+        <header class="topo">
+            <button class="menu-botao" id="menu-botao" aria-label="Abrir menu"><span class="mdi mdi-menu"></span></button>
+            <form class="busca" id="formBusca"><input type="search" id="campo-busca" placeholder="Pesquisar lançamentos..." aria-label="Pesquisar"><button type="submit" aria-label="Pesquisar"><span class="mdi mdi-magnify"></span></button></form>
+            <a class="login-topo" href="login.html">Entrar</a>
+        </header>
+
+        <main>
+            <section class="secao">
+                <div class="titulo-secao">
+                    <h1>Calendário de lançamentos</h1>
+                    <p>Uma lista demonstrativa para organizar os títulos que você quer acompanhar.</p>
+                </div>
+                <div class="lista-calendario" id="listaDestaques">
+                    <article class="lancamento card" data-search="estreia cinema filme aventura">
+                        <div class="data-lancamento"><span>EXEMPLO</span><strong>01</strong><span>JAN</span></div>
+                        <div class="card-info"><span class="categoria">FILME</span>
+                            <h2>Nova aventura</h2>
+                            <p>Data ilustrativa de lançamento. Consulte fontes oficiais para datas reais.</p>
+                        </div>
+                    </article>
+                    <article class="lancamento card" data-search="série suspense mistério">
+                        <div class="data-lancamento data-roxa"><span>EXEMPLO</span><strong>15</strong><span>FEV</span></div>
+                        <div class="card-info"><span class="categoria">SÉRIE</span>
+                            <h2>Mistérios da cidade</h2>
+                            <p>Data ilustrativa de lançamento. Consulte fontes oficiais para datas reais.</p>
+                        </div>
+                    </article>
+                    <article class="lancamento card" data-search="animação família filme">
+                        <div class="data-lancamento"><span>EXEMPLO</span><strong>22</strong><span>MAR</span></div>
+                        <div class="card-info"><span class="categoria">ANIMAÇÃO</span>
+                            <h2>Uma nova jornada</h2>
+                            <p>Data ilustrativa de lançamento. Consulte fontes oficiais para datas reais.</p>
+                        </div>
+                    </article>
+                </div>
+                <p id="mensagemBusca" class="mensagem-busca" hidden>Nenhum lançamento encontrado.</p>
+                <p class="aviso">As datas acima são apenas exemplos de layout, não representam estreias confirmadas.</p>
+            </section>
+        </main>
+        <footer><a class="logo" href="index.html">XV<span>Space</span></a>
+            <p>Seu espaço para descobrir filmes e séries.</p>
+            <p class="copyright">© 2026 XVSpace. Projeto demonstrativo.</p>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

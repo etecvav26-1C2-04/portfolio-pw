@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XVSpace | Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+</head>
+
+<body class="pagina-login">
+    <main class="caixa-login">
+        <a class="logo" href="index.html">XV<span>Space</span></a>
+        <h1>Bem-vindo ao XVSpace</h1>
+        <p>Entre para continuar explorando filmes e séries.</p>
+
+        <form id="formLogin">
+            <label for="email">E-mail</label>
+            <input id="email" type="email" placeholder="seuemail@exemplo.com" required>
+
+            <label for="senha">Senha</label>
+            <input id="senha" type="password" placeholder="Digite sua senha" required>
+
+            <button class="botao-azul botao-login" type="submit">Entrar</button>
+        </form>
+
+        <p id="mensagemLogin" class="mensagem-login" hidden></p>
+        <a class="voltar-inicio" href="index.html">← Voltar para o início</a>
+        <p class="aviso">Esta é uma demonstração visual. O login não cria contas.</p>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

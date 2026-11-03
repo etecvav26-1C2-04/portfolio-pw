@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>XVSpace | Início</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+
+</head>
+
+<body>
+    <aside class="sidebar" id="sidebar">
+
+        <a class="logo" href="index.html">XV<span>Space</span></a>
+
+        <p class="menu-titulo">NAVEGAR</p>
+
+        <nav class="menu-links">
+
+            <a class="menu-link ativo" href="index.html"><span class="mdi mdi-home"></span> Início</a>
+
+            <a class="menu-link" href="lancamentos.html"><span class="mdi mdi-calendar"></span> Calendário de lançamentos</a>
+
+            <a class="menu-link" href="trailers.html"><span class="mdi mdi-play-circle"></span> Trailers</a>
+
+        </nav>
+
+
+        <div class="sidebar-rodape">
+
+            <a class="menu-link" href="login.html"><span class="mdi mdi-account-circle"></span> Faça Login</a>
+
+        </div>
+
+    </aside>
+
+    <div class="conteudo-principal">
+
+        <header class="topo">
+
+            <form class="busca" id="formBusca" role="search">
+
+                <input type="search" id="campo-busca" placeholder="Pesquisar filmes e séries..." aria-label="Pesquisar">
+
+                <button type="submit" aria-label="Pesquisar"><span class="mdi mdi-magnify"></span></button>
+
+            </form>
+
+            <a class="login-topo" href="login.html">Faça Login</a>
+        </header>
+
+        <main>
+            <section class="secao">
+
+                <div class="titulo-secao">
+
+                    <h1>Descubra seu próximo favorito</h1>
+
+                </div>
+
+                <div class="carrossel">
+
+                    <div class="slides">
+
+
+                        <article class="slide ativo">
+
+                            <img src="assets/banner-lupin.jpeg" alt="Lupin">
+
+                            <div class="banner-conteudo">
+
+                                <span class="etiqueta">EM DESTAQUE</span>
+                                <h2>Lupin</h2>
+                                <p>Suspense, mistério e planos inteligentes em uma série cheia de reviravoltas.</p>
+
+                                <a class="botao-azul" href="#">Mais Detalhes</a>
+
+                            </div>
+
+                        </article>
+
+                        <article class="slide">
+
+                            <img src="assets/banner-michael.webp" alt="Michael Jackson">
+
+                            <div class="banner-conteudo">
+
+                                <span class="etiqueta">MÚSICA E CINEMA</span>
+
+                                <h2>Michael Jackson</h2>
+                                <p>Explore conteúdos sobre música, cinema e grandes histórias.</p>
+
+                                <a class="botao-azul" href="#">Mais Detalhes</a>
+
+                            </div>
+
+                        </article>
+
+                        <article class="slide">
+
+                            <img src="assets/banner-razao-e-sensibilidade.avif" alt="Razão e Sensibilidade">
+
+                            <div class="banner-conteudo">
+
+                                <span class="etiqueta">CLÁSSICO</span>
+
+                                <h2>Razão e Sensibilidade</h2>
+                                <p>Uma história sobre amor, escolhas e relações familiares.</p>
+
+                                <a class="botao-azul" href="#">Mais Detalhes</a>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                    <button class="seta seta-esquerda" id="anterior" type="button">
+
+                        <span class="mdi mdi-chevron-left"></span>
+
+                    </button>
+
+                    <button class="seta seta-direita" id="proximo" type="button">
+
+                        <span class="mdi mdi-chevron-right"></span>
+
+                    </button>
+
+                    <div class="indicadores">
+
+                        <button class="indicador ativo" data-slide="0" aria-label="Banner 1"></button>
+                        <button class="indicador" data-slide="1" aria-label="Banner 2"></button>
+                        <button class="indicador" data-slide="2" aria-label="Banner 3"></button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="secao " id="destaques">
+
+                <div class="titulo-secao ">
+
+                    <h2>Top 15 da Semana</h2>
+
+                </div>
+
+                <div class="grade-filmes" id="listaDestaques">
+
+                    <article class="card">
+
+                        <img src="assets/banner-lupin.jpeg" alt="Lupin">
+
+                        <div class="card-info">
+
+                            <span class="categoria">SÉRIE · SUSPENSE</span>
+
+                            <h3>Lupin</h3>
+                            <p>Uma história de mistério, estratégia e investigação.</p>
+
+                            <a class="botao-card " href="#" target="_self ">Explorar</a>
+
+                        </div>
+
+                    </article>
+
+                    <article class="card">
+
+                        <img src="assets/top15/michael-jackson.jpeg" alt="Michael Jackson">
+
+                        <div class="card-info">
+
+                            <span class="categoria">MÚSICA · BIOGRAFIA</span>
+
+                            <h3>Michael Jackson</h3>
+                            <p>Conteúdos relacionados à música e à cultura pop.</p>
+
+                            <a class="botao-card" href="#" target="_self">Explorar</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="assets/top15/stranger-things.webp" alt="Stranger Things">
+
+                        <div class="card-info">
+
+                            <span class="categoria ">SÉRIE · TERROR</span>
+
+                            <h3>Stranger Things</h3>
+                            <p>Criaturas monstruosas, agências secretas do governo e se aventuram em dimensões paralelas.</p>
+
+                            <a class="botao-card " href="# " target="_self ">Explorar</a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+                <section class="secao chamada ">
+
+                    <span class="mdi mdi-calendar-star icone-grande "></span>
+
+                    <div>
+
+                        <h2>Não perca as próximas estreias</h2>
+
+                        <p>Confira o calendário e acompanhe os lançamentos.</p>
+
+                    </div>
+
+                    <a class="botao-azul" href="lancamentos.html" target="_self">Ver calendário</a>
+
+                </section>
+
+        </main>
+
+        <footer>
+
+            <a class="logo " href="index.html ">XV<span>Space</span></a>
+
+            <p>Seu espaço para descobrir filmes e séries.</p>
+
+            <p class="copyright ">© 2026 XVSpace. Projeto demonstrativo.</p>
+
+        </footer>
+
+    </div>
+
+    <script src="js/script.js "></script>
+</body>
+
+</html>

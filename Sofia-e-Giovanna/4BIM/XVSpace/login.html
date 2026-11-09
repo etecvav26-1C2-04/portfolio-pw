@@ -4,32 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XVSpace | Login</title>
+
+    <title>XVSpace | Trailers</title>
+
+    <link rel="icon" type="image/png" href="assets/logo/XVS.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
 </head>
 
-<body class="pagina-login">
-    <main class="caixa-login">
+<body>
+
+    <!-- MENU LATERAL -->
+    <aside class="sidebar" id="sidebar">
+
         <a class="logo" href="index.html">XV<span>Space</span></a>
-        <h1>Bem-vindo ao XVSpace</h1>
-        <p>Entre para continuar explorando filmes e séries.</p>
 
-        <form id="formLogin">
-            <label for="email">E-mail</label>
-            <input id="email" type="email" placeholder="seuemail@exemplo.com" required>
+        <p class="menu-titulo">NAVEGAR</p>
 
-            <label for="senha">Senha</label>
-            <input id="senha" type="password" placeholder="Digite sua senha" required>
+        <nav class="menu-links">
 
-            <button class="botao-azul botao-login" type="submit">Entrar</button>
-        </form>
+            <a class="menu-link ativo" href="index.html">
+                <span class="mdi mdi-home "></span> Início
+            </a>
 
-        <a class="voltar-inicio" href="index.html">← Voltar para o início</a>
-        <p class="aviso">Esta é uma demonstração visual. O login não cria contas.</p>
-    </main>
+            <a class="menu-link" href="lancamentos.html">
+                <span class="mdi mdi-calendar"></span> Calendário de lançamentos
+            </a>
+
+            <a class="menu-link" href="trailers.html">
+                <span class="mdi mdi-play-circle "></span> Trailers
+            </a>
+
+        </nav>
+
+        <div class="sidebar-rodape">
+
+            <a class="menu-link" href="login.html">
+                <span class="mdi mdi-account-circle"></span> Faça Login
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <div class="conteudo-principal">
+
+        <header class="topo">
+
+            <form class="busca" id="formBusca" role="search">
+
+                <input type="search" id="campo-busca" placeholder="Pesquisar filmes e séries..." aria-label="Pesquisar ">
+
+                <button type="submit" aria-label="Pesquisar">
+                    <span class="mdi mdi-magnify"></span>
+                </button>
+
+            </form>
+
+            <a class="login-topo" href="login.html">Faça Login</a>
+
+        </header>
+
+
+        <main>
+
+            <section class="secao">
+
+                <div class="titulo-secao">
+
+                    <h1>Trailers</h1>
+
+                    <p>
+                        Prévias e vídeos para conhecer melhor filmes e séries.
+                    </p>
+
+                </div>
+
+
+                <div class="grade-trailers">
+
+                    <div class="video-trailer">
+
+                        <iframe src="https://www.youtube.com/embed/o9Y03GaOCuo?si=LCc_qwNooVlmMHwf&amp;controls=0" title="Trailer 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+                    <div class="video-trailer">
+
+                        <iframe src="https://www.youtube.com/embed/T8ew79fw0SY?si=QQsbf4uIDiASp19i&amp;controls=0" title="Trailer 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+                    <div class="video-trailer">
+
+                        <iframe src="https://www.youtube.com/embed/NTiqVJ8vVQM?si=ZoKxmpunAPDLAA50&amp;controls=0" title="Trailer 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+                    <div class="video-trailer">
+
+                        <iframe src="https://www.youtube.com/embed/WscqN5kXHc0?si=celOknJkwSnsMWN1&amp;controls=0" title="Trailer 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+
+        <footer>
+
+            <a class="logo " href="index.html ">XV<span>Space</span></a>
+
+            <p>Seu espaço para descobrir filmes e séries.</p>
+
+            <p>&copy; 2026 XVSpace.</p>
+
+        </footer>
+
+    </div>
 
     <script src="js/script.js"></script>
+
 </body>
 
 </html>

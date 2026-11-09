@@ -4,69 +4,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>XVSpace | Trailers</title>
+
+    <link rel="icon" type="image/png" href="assets/logo/XVS.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
 </head>
 
 <body>
+
+    <!-- MENU LATERAL -->
     <aside class="sidebar" id="sidebar">
+
         <a class="logo" href="index.html">XV<span>Space</span></a>
 
         <p class="menu-titulo">NAVEGAR</p>
+
         <nav class="menu-links">
-            <a class="menu-link ativo" href="index.html"><span class="mdi mdi-home"></span> Início</a>
-            <a class="menu-link" href="lancamentos.html"><span class="mdi mdi-calendar"></span> Calendário de lançamentos</a>
-            <a class="menu-link" href="trailers.html"><span class="mdi mdi-play-circle"></span> Trailers</a>
+
+            <a class="menu-link ativo" href="index.html">
+                <span class="mdi mdi-home "></span> Início
+            </a>
+
+            <a class="menu-link" href="lancamentos.html">
+                <span class="mdi mdi-calendar"></span> Calendário de lançamentos
+            </a>
+
+            <a class="menu-link" href="trailers.html">
+                <span class="mdi mdi-play-circle "></span> Trailers
+            </a>
+
         </nav>
 
-        <div class="sidebar-rodape"><a class="menu-link" href="login.html"><span class="mdi mdi-account-circle"></span> Faça Login</a></div>
+        <div class="sidebar-rodape">
+
+            <a class="menu-link" href="login.html">
+                <span class="mdi mdi-account-circle"></span> Faça Login
+            </a>
+
+        </div>
+
     </aside>
 
+
     <div class="conteudo-principal">
+
         <header class="topo">
-            <button class="menu-botao" id="menu-botao" aria-label="Abrir menu"><span class="mdi mdi-menu"></span></button>
-            <form class="busca" id="formBusca"><input type="search" id="campo-busca" placeholder="Pesquisar trailers..." aria-label="Pesquisar"><button type="submit" aria-label="Pesquisar"><span class="mdi mdi-magnify"></span></button></form>
+
+            <form class="busca" id="formBusca" role="search">
+
+                <input type="search" id="campo-busca" placeholder="Pesquisar filmes e séries..." aria-label="Pesquisar ">
+
+                <button type="submit" aria-label="Pesquisar">
+                    <span class="mdi mdi-magnify"></span>
+                </button>
+
+            </form>
 
             <a class="login-topo" href="login.html">Faça Login</a>
+
         </header>
 
+
         <main>
+
             <section class="secao">
+
                 <div class="titulo-secao">
+
                     <h1>Trailers</h1>
-                    <p>Prévias e vídeos para conhecer melhor filmes e séries.</p>
+
+                    <p>
+                        Prévias e vídeos para conhecer melhor filmes e séries.
+                    </p>
+
                 </div>
-                <div class="grade-filmes" id="listaDestaques">
-                    <article class="card" data-search="lupin suspense trailer">
-                        <img src="assets/banner-lupin.jpeg" alt="Imagem de Lupin">
-                        <div class="card-info"><span class="categoria">SÉRIE · SUSPENSE</span>
-                            <h3>Lupin</h3>
-                            <p>Procure o trailer oficial desta série no canal oficial ou em uma plataforma de vídeos.</p><a class="botao-card" href="https://www.youtube.com/results?search_query=Lupin+trailer+oficial" target="_blank" rel="noopener noreferrer">Buscar trailer</a></div>
-                    </article>
-                    <article class="card" data-search="michael jackson trailer música">
-                        <img src="assets/banner-michael.webp" alt="Imagem de Michael Jackson">
-                        <div class="card-info"><span class="categoria">MÚSICA · BIOGRAFIA</span>
-                            <h3>Michael Jackson</h3>
-                            <p>Pesquise vídeos e materiais relacionados ao artista.</p><a class="botao-card" href="https://www.youtube.com/results?search_query=Michael+Jackson+trailer+oficial" target="_blank" rel="noopener noreferrer">Buscar vídeos</a></div>
-                    </article>
-                    <article class="card" data-search="razão sensibilidade romance trailer">
-                        <img src="assets/banner-razao-e-sensibilidade.avif" alt="Imagem de Razão e Sensibilidade">
-                        <div class="card-info"><span class="categoria">FILME · ROMANCE</span>
-                            <h3>Razão e Sensibilidade</h3>
-                            <p>Encontre prévias e conteúdos relacionados a este clássico.</p><a class="botao-card" href="https://www.youtube.com/results?search_query=Sense+and+Sensibility+official+trailer" target="_blank" rel="noopener noreferrer">Buscar trailer</a></div>
-                    </article>
+
+
+                <div class="grade-trailers">
+
+                    <div class="video-trailer">
+
+                        <iframe src="https://www.youtube.com/embed/o9Y03GaOCuo?si=LCc_qwNooVlmMHwf&amp;controls=0" title="Trailer 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+                    <div class="video-trailer">
+
+                        <iframe src="https://www.youtube.com/embed/T8ew79fw0SY?si=QQsbf4uIDiASp19i&amp;controls=0" title="Trailer 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+                    <div class="video-trailer">
+
+                        <iframe src="https://www.youtube.com/embed/NTiqVJ8vVQM?si=ZoKxmpunAPDLAA50&amp;controls=0" title="Trailer 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+                    <div class="video-trailer">
+
+                        <iframe src="https://www.youtube.com/embed/WscqN5kXHc0?si=celOknJkwSnsMWN1&amp;controls=0" title="Trailer 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
                 </div>
-                <p id="mensagemBusca" class="mensagem-busca" hidden>Nenhum trailer encontrado.</p>
-                <p class="aviso">Os links abrem resultados de pesquisa no YouTube, não vídeos incorporados ao site.</p>
+
             </section>
+
         </main>
-        <footer><a class="logo" href="index.html">XV<span>Space</span></a>
+
+
+
+        <footer>
+
+            <a class="logo " href="index.html ">XV<span>Space</span></a>
+
             <p>Seu espaço para descobrir filmes e séries.</p>
-            <p class="copyright">© 2026 XVSpace. Projeto demonstrativo.</p>
+
+            <p>&copy; 2026 XVSpace.</p>
+
         </footer>
+
     </div>
+
     <script src="js/script.js"></script>
+
 </body>
 
 </html>

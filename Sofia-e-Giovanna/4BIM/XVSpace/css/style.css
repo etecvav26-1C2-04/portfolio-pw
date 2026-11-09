@@ -1,5 +1,3 @@
-/* CONFIGURAÇÕES GERAIS */
-
 :root {
     --fundo: #121212;
     --painel: #1c1c1c;
@@ -66,10 +64,6 @@ button {
     font-weight: bold;
 }
 
-.logo span {
-    color: var(--azul-claro);
-}
-
 .menu-titulo {
     margin-bottom: 12px;
     padding: 0 12px;
@@ -109,7 +103,10 @@ button {
 }
 
 
+
 /* CONTEÚDO PRINCIPAL */
+
+
 
 .conteudo-principal {
     min-height: 100vh;
@@ -125,7 +122,13 @@ body.menu-fechado .conteudo-principal {
 }
 
 
+/* ============================= */
+
+
 /* CABEÇALHO */
+
+
+/* ============================= */
 
 .topo {
     position: sticky;
@@ -188,7 +191,13 @@ body.menu-fechado .conteudo-principal {
 }
 
 
+/* ============================= */
+
+
 /* SEÇÕES */
+
+
+/* ============================= */
 
 .secao {
     width: 92%;
@@ -221,7 +230,13 @@ body.menu-fechado .conteudo-principal {
 }
 
 
-/* CARROSSEL */
+/* ============================= */
+
+
+/* CARROSSEL PRINCIPAL */
+
+
+/* ============================= */
 
 .carrossel {
     position: relative;
@@ -305,7 +320,13 @@ body.menu-fechado .conteudo-principal {
 }
 
 
-/* SETAS E INDICADORES */
+/* ============================= */
+
+
+/* SETAS E INDICADORES DO BANNER */
+
+
+/* ============================= */
 
 .seta {
     position: absolute;
@@ -355,88 +376,370 @@ body.menu-fechado .conteudo-principal {
 }
 
 
-/* CARDS DE FILMES */
+/* ============================= */
 
-.grade-filmes {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
+
+/* TOP 15 DA SEMANA */
+
+
+/* ============================= */
+
+.slider {
+    width: 100%;
+    padding: 25px 0 15px;
+    --side: 185px;
+    --far: 370px;
 }
 
-.card {
-    min-width: 0;
+.slider input {
+    display: none;
+}
+
+.testimonials {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    perspective: 1900px;
     overflow: hidden;
-    border: 1px solid #333;
-    border-radius: 6px;
-    background: var(--cartao);
 }
 
-.card:hover {
-    border-color: #555;
+
+/* CARDS */
+
+.testimonials .item {
+    position: absolute;
+    top: 25px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 320px;
+    overflow: hidden;
+    border: 1px solid #303030;
+    border-radius: 13px;
+    background: #1c1c1c;
+    color: white;
+    text-align: left;
+    transition: 0.5s ease;
+    transform: translate3d(0, 0, -500px) scale(0.5);
+    opacity: 0;
+    z-index: 1;
 }
 
-.card>img {
+
+/* ÁREA CLICÁVEL DO CARD */
+
+.card-selecao {
+    position: relative;
     display: block;
     width: 100%;
-    height: 600px;
+    cursor: pointer;
+}
+
+
+/* PÔSTERES */
+
+.card-selecao img {
+    display: block;
+    width: 100%;
+    height: 245px;
     object-fit: cover;
 }
 
-.card-info {
-    padding: 15px;
-}
 
-.categoria {
-    display: block;
-    margin-bottom: 10px;
-    color: #7bb8ff;
-    font-size: 12px;
+/* NÚMERO DO RANKING */
+
+.ranking {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    padding: 4px 12px;
+    border-radius: 0 0 9px 0;
+    background: var(--azul);
+    color: white;
+    font-size: 13px;
     font-weight: bold;
 }
 
-.card-info h2,
-.card-info h3 {
-    margin-bottom: 10px;
-    font-size: 19px;
+
+/* TÍTULO DO CARD */
+
+.card-conteudo {
+    min-height: 48px;
+    padding: 10px 8px;
+    background: #1c1c1c;
 }
 
-.card-info p {
-    margin-bottom: 15px;
-    color: var(--texto-secundario);
+.card-conteudo h3 {
+    color: white;
     font-size: 14px;
-    line-height: 1.5;
+    font-weight: 500;
+    line-height: 1.3;
 }
 
-.botao-card {
-    display: inline-block;
-    padding: 9px 12px;
-    border-radius: 4px;
-    background: #333;
-    color: #8fc4ff;
-    font-size: 13px;
-}
 
-.botao-card:hover {
-    background: #444;
-}
+/* PÔSTERES AINDA NÃO ADICIONADOS */
 
 .poster-placeholder {
-    display: grid;
-    place-items: center;
-    height: 230px;
-    background: #292929;
-    color: var(--amarelo);
-    font-size: 60px;
+    height: 245px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(145deg, #26384d, #171717);
+    color: #bdbdbd;
+    font-size: 11px;
 }
 
-.poster-roxo,
-.noticia-roxa {
-    background: #332447;
-    color: #d7b9ff;
+.poster-placeholder .mdi {
+    font-size: 38px;
+    color: #75b4ff;
 }
+
+
+/* LINK DA SINOPSE */
+
+.link-sinopse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    margin: auto 8px 9px;
+    padding: 7px 8px;
+    border-radius: 4px;
+    background: var(--azul);
+    color: white;
+    font-size: 11px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.link-sinopse:hover {
+    background: var(--azul-claro);
+}
+
+
+/* ============================= */
+
+
+/* POSIÇÃO DOS CARDS 3D */
+
+
+/* ============================= */
+
+
+/* CARD CENTRAL */
+
+#t-1:checked~.testimonials .item:nth-child(1),
+#t-2:checked~.testimonials .item:nth-child(2),
+#t-3:checked~.testimonials .item:nth-child(3),
+#t-4:checked~.testimonials .item:nth-child(4),
+#t-5:checked~.testimonials .item:nth-child(5),
+#t-6:checked~.testimonials .item:nth-child(6),
+#t-7:checked~.testimonials .item:nth-child(7),
+#t-8:checked~.testimonials .item:nth-child(8),
+#t-9:checked~.testimonials .item:nth-child(9),
+#t-10:checked~.testimonials .item:nth-child(10),
+#t-11:checked~.testimonials .item:nth-child(11),
+#t-12:checked~.testimonials .item:nth-child(12),
+#t-13:checked~.testimonials .item:nth-child(13),
+#t-14:checked~.testimonials .item:nth-child(14),
+#t-15:checked~.testimonials .item:nth-child(15) {
+    transform: translate3d(0, 0, 0) scale(1);
+    z-index: 5;
+    opacity: 1;
+}
+
+
+/* CARD À DIREITA */
+
+#t-1:checked~.testimonials .item:nth-child(2),
+#t-2:checked~.testimonials .item:nth-child(3),
+#t-3:checked~.testimonials .item:nth-child(4),
+#t-4:checked~.testimonials .item:nth-child(5),
+#t-5:checked~.testimonials .item:nth-child(6),
+#t-6:checked~.testimonials .item:nth-child(7),
+#t-7:checked~.testimonials .item:nth-child(8),
+#t-8:checked~.testimonials .item:nth-child(9),
+#t-9:checked~.testimonials .item:nth-child(10),
+#t-10:checked~.testimonials .item:nth-child(11),
+#t-11:checked~.testimonials .item:nth-child(12),
+#t-12:checked~.testimonials .item:nth-child(13),
+#t-13:checked~.testimonials .item:nth-child(14),
+#t-14:checked~.testimonials .item:nth-child(15),
+#t-15:checked~.testimonials .item:nth-child(1) {
+    transform: translate3d(var(--side), 0, -100px) scale(0.88);
+    z-index: 4;
+    opacity: 0.85;
+}
+
+
+/* CARD À ESQUERDA */
+
+#t-1:checked~.testimonials .item:nth-child(15),
+#t-2:checked~.testimonials .item:nth-child(1),
+#t-3:checked~.testimonials .item:nth-child(2),
+#t-4:checked~.testimonials .item:nth-child(3),
+#t-5:checked~.testimonials .item:nth-child(4),
+#t-6:checked~.testimonials .item:nth-child(5),
+#t-7:checked~.testimonials .item:nth-child(6),
+#t-8:checked~.testimonials .item:nth-child(7),
+#t-9:checked~.testimonials .item:nth-child(8),
+#t-10:checked~.testimonials .item:nth-child(9),
+#t-11:checked~.testimonials .item:nth-child(10),
+#t-12:checked~.testimonials .item:nth-child(11),
+#t-13:checked~.testimonials .item:nth-child(12),
+#t-14:checked~.testimonials .item:nth-child(13),
+#t-15:checked~.testimonials .item:nth-child(14) {
+    transform: translate3d(calc(var(--side) * -1), 0, -100px) scale(0.88);
+    z-index: 4;
+    opacity: 0.85;
+}
+
+
+/* CARD MAIS DISTANTE À DIREITA */
+
+#t-1:checked~.testimonials .item:nth-child(3),
+#t-2:checked~.testimonials .item:nth-child(4),
+#t-3:checked~.testimonials .item:nth-child(5),
+#t-4:checked~.testimonials .item:nth-child(6),
+#t-5:checked~.testimonials .item:nth-child(7),
+#t-6:checked~.testimonials .item:nth-child(8),
+#t-7:checked~.testimonials .item:nth-child(9),
+#t-8:checked~.testimonials .item:nth-child(10),
+#t-9:checked~.testimonials .item:nth-child(11),
+#t-10:checked~.testimonials .item:nth-child(12),
+#t-11:checked~.testimonials .item:nth-child(13),
+#t-12:checked~.testimonials .item:nth-child(14),
+#t-13:checked~.testimonials .item:nth-child(15),
+#t-14:checked~.testimonials .item:nth-child(1),
+#t-15:checked~.testimonials .item:nth-child(2) {
+    transform: translate3d(var(--far), 0, -250px) scale(0.72);
+    z-index: 3;
+    opacity: 0.45;
+}
+
+
+/* CARD ESQUERDA */
+
+#t-1:checked~.testimonials .item:nth-child(14),
+#t-2:checked~.testimonials .item:nth-child(15),
+#t-3:checked~.testimonials .item:nth-child(1),
+#t-4:checked~.testimonials .item:nth-child(2),
+#t-5:checked~.testimonials .item:nth-child(3),
+#t-6:checked~.testimonials .item:nth-child(4),
+#t-7:checked~.testimonials .item:nth-child(5),
+#t-8:checked~.testimonials .item:nth-child(6),
+#t-9:checked~.testimonials .item:nth-child(7),
+#t-10:checked~.testimonials .item:nth-child(8),
+#t-11:checked~.testimonials .item:nth-child(9),
+#t-12:checked~.testimonials .item:nth-child(10),
+#t-13:checked~.testimonials .item:nth-child(11),
+#t-14:checked~.testimonials .item:nth-child(12),
+#t-15:checked~.testimonials .item:nth-child(13) {
+    transform: translate3d(calc(var(--far) * -1), 0, -250px) scale(0.72);
+    z-index: 3;
+    opacity: 0.45;
+}
+
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.testimonials .item:hover {
+    border-color: var(--azul-claro);
+}
+
+
+/* ============================= */
+
+
+/* INDICADORES DO TOP 15 */
+
+
+/* ============================= */
+
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 15px auto 0;
+    max-width: 600px;
+}
+
+.dots label {
+    display: block;
+    width: 18px;
+    height: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #777;
+    transition: 0.3s;
+}
+
+
+/* RISQUINHO ATIVO */
+
+#t-1:checked~.dots label[for="t-1"],
+#t-2:checked~.dots label[for="t-2"],
+#t-3:checked~.dots label[for="t-3"],
+#t-4:checked~.dots label[for="t-4"],
+#t-5:checked~.dots label[for="t-5"],
+#t-6:checked~.dots label[for="t-6"],
+#t-7:checked~.dots label[for="t-7"],
+#t-8:checked~.dots label[for="t-8"],
+#t-9:checked~.dots label[for="t-9"],
+#t-10:checked~.dots label[for="t-10"],
+#t-11:checked~.dots label[for="t-11"],
+#t-12:checked~.dots label[for="t-12"],
+#t-13:checked~.dots label[for="t-13"],
+#t-14:checked~.dots label[for="t-14"],
+#t-15:checked~.dots label[for="t-15"] {
+    width: 30px;
+    background: var(--amarelo);
+}
+
+
+/* ============================= */
+
+
+/* PÁGINA DE TRAILERS */
+
+
+/* ============================= */
+
+.grade-trailers {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.video-trailer {
+    overflow: hidden;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: var(--painel);
+}
+
+.video-trailer iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
+
+
+/* ============================= */
 
 
 /* LANÇAMENTOS */
+
+
+/* ============================= */
 
 .lista-calendario {
     display: grid;
@@ -445,6 +748,31 @@ body.menu-fechado .conteudo-principal {
 
 .lancamento {
     display: flex;
+    min-height: 140px;
+    overflow: hidden;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: var(--painel);
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info h2 {
+    margin: 8px 0;
+    font-size: 20px;
+}
+
+.card-info p {
+    color: var(--texto-secundario);
+    line-height: 1.5;
+}
+
+.categoria {
+    color: #75b4ff;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .data-lancamento {
@@ -475,7 +803,7 @@ body.menu-fechado .conteudo-principal {
 }
 
 
-/* CHAMADA */
+/* CHAMADA PARA LANÇAMENTOS */
 
 .chamada {
     display: flex;
@@ -506,31 +834,12 @@ body.menu-fechado .conteudo-principal {
     flex-shrink: 0;
 }
 
-
-/* PESQUISA */
-
-.mensagem-busca {
-    margin-top: 20px;
-    color: var(--texto-secundario);
-}
-
-.card[hidden] {
-    display: none !important;
-}
-
-
-/* RODAPÉ */
-
 footer {
     margin-top: 50px;
     padding: 30px 20px;
     border-top: 1px solid #333;
     text-align: center;
     color: var(--texto-secundario);
-}
-
-footer .logo {
-    margin: 0 0 12px;
 }
 
 footer p {
@@ -543,7 +852,13 @@ footer p {
 }
 
 
+/* ============================= */
+
+
 /* LOGIN */
+
+
+/* ============================= */
 
 .pagina-login {
     display: grid;
@@ -616,7 +931,11 @@ footer p {
 }
 
 
+
+
 /* ANIMAÇÕES DE SCROLL */
+
+
 
 .revelar {
     opacity: 0;
